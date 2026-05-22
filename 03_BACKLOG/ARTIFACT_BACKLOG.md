@@ -191,7 +191,7 @@ Every backlog row uses the same field set:
 
 ## Current build recommendation
 
-Phase 3 next: build the governance bundle (A-0004 hardening, A-0021, A-0031, A-0032, A-0033, A-0034, A-0035). Until Phase 3 is in place, do not start Phase 4 workflows or Phase 5 prompts; the governance bundle defines the human review point pattern and the data envelope that those phases inherit.
+Phase 3 governance bundle is `Hardened` (A-0004, A-0021, A-0031, A-0032, A-0033, A-0034, A-0035 - see file paths under `06_GOVERNANCE/`). Phase 4 (workflow library) is next: build the manual-first PM/Ops workflows listed under "Workflow library" above, with each workflow citing the Phase 3 governance bundle by name (data category from `DATA_SENSITIVITY_DECISION_MODEL.md`, review intensity from `HUMAN_REVIEW_AND_AUDITABILITY_MODEL.md`, human review point from the matching per-domain pattern). Phase 5 (prompt library) follows Phase 4 and inherits the same envelope.
 
 ## Backlog hygiene rules
 
