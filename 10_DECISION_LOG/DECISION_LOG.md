@@ -20,6 +20,7 @@ This log captures important ATLAS PM/Ops OS decisions so the project remains con
 | D-0010 | 2026-05-22 | Gate the session-end commit step by mode: local-agent commits on a feature branch; chat-only hands Tom a copy-paste commit instruction as a human follow-up. | The previous unconditional commit step was unsatisfiable in chat-only mode. | The session-end protocol is internally consistent for both supported modes. | Active |
 | D-0011 | 2026-05-22 | Require chat-only sessions to ask Tom to paste the relevant phase prompt and `DECISION_LOG.md` contents, in addition to `MASTER_CONTEXT.md` and `SESSION_HANDOFF.md`. | Phase work and decision logging cannot be run from memory in chat-only mode. | Chat-only sessions stay aligned with phase-specific instructions and avoid decision-ID collisions. | Active |
 | D-0012 | 2026-05-22 | Leave the three `skills/*/SKILL.md` files unchanged in Phase 1. | They already align with the strengthened protocols; edits would be cosmetic and outside Phase 1 scope. | Skill files revisited only when Phase 2+ surfaces a concrete gap. | Active |
+| D-0013 | 2026-05-22 | Perform ATLAS Phase 1 work on feature branch `feat/phase-01-master-context-continuity` and open PR #1 against `main`; never edit `main` directly. | Branch-protection guardrail enforced by the repo pre-tool hook; aligns with the global rule "never edit main, master, release, or prod directly." | All ATLAS build phases default to a per-phase feature branch and PR review; no direct commits to `main`. | Active |
 
 ## Decision entry template
 

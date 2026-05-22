@@ -54,7 +54,7 @@ The three local skill files (`skills/atlas-planner/SKILL.md`, `skills/atlas-arti
 | Leave the three `skills/*/SKILL.md` files unchanged for now. | They already align with the strengthened protocols. Edits would be cosmetic and outside Phase 1 scope. | `skills/` |
 | Work on a feature branch `feat/phase-01-master-context-continuity` and not on `main`. | Branch-protection guardrail and the global "never edit main directly" rule. | Git |
 
-These decisions have been logged in this session as `D-0006` through `D-0012` in `10_DECISION_LOG/DECISION_LOG.md`. The set also includes two decisions added in response to Codex review on PR #1 (mode-gated commit step, and chat-only mode must request the phase prompt and decision log contents).
+These decisions have been logged in this session as `D-0006` through `D-0013` in `10_DECISION_LOG/DECISION_LOG.md`, in the same order as the table above. The set also includes two decisions added in response to Codex review on PR #1 (mode-gated commit step `D-0010`, and chat-only mode must request the phase prompt and decision log contents `D-0011`).
 
 ## Safety review
 
@@ -79,6 +79,8 @@ Confirm:
 - [x] Every artifact has a clear purpose and an obvious human review step where relevant.
 - [x] No artifact assumes access or data Tom may not have during clearance-limited onboarding.
 - [x] This handoff file is up to date and contains the next best prompt.
+- [x] Significant decisions from this session are logged in `10_DECISION_LOG/DECISION_LOG.md` in this same session (entries `D-0006` through `D-0013`); none deferred.
+- [x] Mode-gated commit step from the session-end protocol is satisfied: local-agent mode committed on feature branch `feat/phase-01-master-context-continuity`; PR #1 opened against `main`.
 
 ## Open items
 
