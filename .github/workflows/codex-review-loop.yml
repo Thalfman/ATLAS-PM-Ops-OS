@@ -1,0 +1,141 @@
+name: Codex review loop
+
+# Fires Claude Code on this repo's PRs to address Codex review feedback per
+# the standing rule in /CLAUDE.md.
+#
+# Triggers:
+#   - pull_request_review (when Codex submits a full review)
+#   - pull_request_review_comment (per-line review comment)
+#   - issue_comment on a PR (catches Codex inline comments and @claude mentions)
+#   - workflow_dispatch (manual rerun from the Actions tab)
+#
+# Author filter: only fires for review events authored by `chatgpt-codex-connector`
+# (or its bot variant) and for `@claude`-mentioned comments by humans. This avoids
+# infinite loops because Claude's own commits do not produce review events.
+#
+# Required secret:
+#   - CLAUDE_CODE_OAUTH_TOKEN  (Pro/Max subscription OAuth token,
+#                              generated locally via `claude setup-token`)
+#
+# Generate the token:
+#   1. From a Claude Code session on your local machine, run
+#      `/setup-token` (slash command) or in your shell run
+#      `claude setup-token`.
+#   2. Copy the token it prints.
+#
+# Set the secret:
+#   GitHub repo > Settings > Secrets and variables > Actions
+#   > New repository secret
+#   Name: CLAUDE_CODE_OAUTH_TOKEN
+#   Value: (the token from step 2)
+#
+# This setup uses the Pro/Max subscription, not the Anthropic API.
+# Do not add ANTHROPIC_API_KEY.
+
+on:
+  pull_request_review:
+    types: [submitted]
+  pull_request_review_comment:
+    types: [created]
+  issue_comment:
+    types: [created]
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'PR number to process'
+        required: true
+        type: string
+
+concurrency:
+  group: codex-review-loop-${{ github.event.pull_request.number || github.event.issue.number || inputs.pr_number }}
+  cancel-in-progress: false
+
+jobs:
+  codex-review-loop:
+    name: Address Codex review feedback
+    runs-on: ubuntu-latest
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'pull_request_review' &&
+        startsWith(github.event.review.user.login, 'chatgpt-codex-connector') &&
+        (github.event.review.state == 'commented' || github.event.review.state == 'changes_requested')) ||
+      (github.event_name == 'pull_request_review_comment' &&
+        startsWith(github.event.comment.user.login, 'chatgpt-codex-connector')) ||
+      (github.event_name == 'issue_comment' &&
+        github.event.issue.pull_request != null &&
+        (startsWith(github.event.comment.user.login, 'chatgpt-codex-connector') ||
+          contains(github.event.comment.body, '@claude')))
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      id-token: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Claude Code on Codex feedback
+        uses: anthropics/claude-code-action@v1
+        with:
+          # Authenticates against Tom's personal Pro/Max subscription.
+          # See repo secret CLAUDE_CODE_OAUTH_TOKEN. Do not add API keys.
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+
+          allowed_bots: 'chatgpt-codex-connector[bot],chatgpt-codex-connector'
+
+          claude_args: |
+            --model claude-sonnet-4-6
+            --max-turns 25
+
+          prompt: |
+            REPO: ${{ github.repository }}
+            EVENT: ${{ github.event_name }}
+            PR: ${{ github.event.pull_request.number || github.event.issue.number || inputs.pr_number }}
+            ACTOR: ${{ github.event.review.user.login || github.event.comment.user.login || github.actor }}
+
+            Read `CLAUDE.md` at the repo root first. Then read
+            `00_MASTER_CONTEXT/MASTER_CONTEXT.md` and
+            `09_HANDOFFS/SESSION_HANDOFF.md` as source-of-truth files. Stay
+            inside the ATLAS hard safety boundary at all times.
+
+            Task: address every unresolved Codex review thread on this PR per
+            the Standing Codex review loop in `CLAUDE.md`. For each thread,
+            either apply the requested change in the named file and line, or
+            reply on the thread explaining why not. Valid reasons to reply
+            instead of applying:
+              - the change would violate the ATLAS safety boundary in
+                `MASTER_CONTEXT.md`,
+              - the change conflicts with an Active decision in
+                `10_DECISION_LOG/DECISION_LOG.md`,
+              - the change breaks a global guardrail in the user's CLAUDE.md,
+              - the change falls outside the active phase's scope.
+
+            After applying fixes:
+              1. Commit on the PR's existing branch using Conventional Commits
+                 scoped to the phase (e.g., `docs(phase-NN): address codex
+                 review on PR #N`).
+              2. Push to the same branch (fast-forward only; never
+                 `--force-push` a shared branch).
+              3. Resolve each addressed Codex thread.
+              4. If any thread produced a durable decision, append it to
+                 `10_DECISION_LOG/DECISION_LOG.md` in this session.
+              5. Update `09_HANDOFFS/SESSION_HANDOFF.md` if the round changes
+                 phase state, the next best prompt, or any open item.
+
+            Hard limits (never override):
+              - never edit `main`, `master`, `release`, or `prod` directly,
+              - never `git push --force` on a shared branch,
+              - never skip hooks,
+              - never apply a change that introduces classified, CUI, ITAR/
+                export-controlled, proprietary, customer, contract, internal
+                schedule, internal finance, internal technical, real meeting
+                note, real Microsoft Project, or real accounting data,
+              - never add apps, package dependencies, APIs, databases,
+                deployment files, or code scaffolding unless the active phase
+                prompt explicitly requests it. The presence of this workflow
+                file is the single authorized CI exception (see D-0022).
+
+            If there is nothing to address (all Codex threads already
+            resolved), report that and exit without making changes.
