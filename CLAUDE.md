@@ -27,7 +27,7 @@ The single authorized exception is `.github/workflows/codex-review-loop.yml`, ad
 
 The repo has two layers of automation for Codex review feedback:
 
-- **CI layer:** `.github/workflows/codex-review-loop.yml` runs Claude Code on every PR review submitted by `chatgpt-codex-connector`, on every per-line review comment from that bot, and on any comment that mentions `@claude`. The workflow requires a repo secret (`ANTHROPIC_API_KEY` or `CLAUDE_CODE_OAUTH_TOKEN`). See D-0022 for the authorization of this CI exception.
+- **CI layer:** `.github/workflows/codex-review-loop.yml` runs Claude Code on every PR review submitted by `chatgpt-codex-connector`, on every per-line review comment from that bot, and on any comment that mentions `@claude`. The workflow authenticates against Tom's personal Claude Pro/Max subscription via the repo secret `CLAUDE_CODE_OAUTH_TOKEN` (generated locally with `claude setup-token`). The workflow does not use, and must not be reconfigured to use, `ANTHROPIC_API_KEY`. See D-0022 for the authorization of this CI exception.
 - **Interactive layer (this file):** Whenever a Claude Code session is running locally in this repo and a PR has unresolved Codex review threads, address them automatically per the loop below.
 
 Apply the following loop in both layers, without asking permission, on every session and after every push to a PR branch:

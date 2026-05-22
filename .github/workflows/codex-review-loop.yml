@@ -13,11 +13,24 @@ name: Codex review loop
 # (or its bot variant) and for `@claude`-mentioned comments by humans. This avoids
 # infinite loops because Claude's own commits do not produce review events.
 #
-# Required secret (one of):
-#   - ANTHROPIC_API_KEY  (Anthropic API billing)
-#   - CLAUDE_CODE_OAUTH_TOKEN  (Pro/Max OAuth, generated via `claude setup-token`)
+# Required secret:
+#   - CLAUDE_CODE_OAUTH_TOKEN  (Pro/Max subscription OAuth token,
+#                              generated locally via `claude setup-token`)
 #
-# Set the secret at: Settings > Secrets and variables > Actions > New repository secret.
+# Generate the token:
+#   1. From a Claude Code session on your local machine, run
+#      `/setup-token` (slash command) or in your shell run
+#      `claude setup-token`.
+#   2. Copy the token it prints.
+#
+# Set the secret:
+#   GitHub repo > Settings > Secrets and variables > Actions
+#   > New repository secret
+#   Name: CLAUDE_CODE_OAUTH_TOKEN
+#   Value: (the token from step 2)
+#
+# This setup uses the Pro/Max subscription, not the Anthropic API.
+# Do not add ANTHROPIC_API_KEY.
 
 on:
   pull_request_review:
@@ -66,10 +79,9 @@ jobs:
       - name: Run Claude Code on Codex feedback
         uses: anthropics/claude-code-action@v1
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          # If you prefer the Pro/Max OAuth token, comment the line above and
-          # uncomment the line below (and set the matching repo secret).
-          # claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # Authenticates against Tom's personal Pro/Max subscription.
+          # See repo secret CLAUDE_CODE_OAUTH_TOKEN. Do not add API keys.
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
 
           allowed_bots: 'chatgpt-codex-connector[bot],chatgpt-codex-connector'
 
