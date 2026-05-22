@@ -21,9 +21,16 @@ Use only synthetic, public, generic, fictional, or Tom-authored non-proprietary 
 
 Do not add apps, package dependencies, APIs, databases, deployment files, frontend code, backend code, or other code scaffolding unless the active phase prompt explicitly requests it. Keep every artifact Markdown-first, Gemini-first, and platform-agnostic.
 
+The single authorized exception is `.github/workflows/codex-review-loop.yml`, added to support the Standing Codex review loop. Authorized in D-0022. Any further CI files require a new logged decision.
+
 ## Standing Codex review loop
 
-Whenever a pull request on this repo has unresolved review threads from the Codex review bot, address them automatically, without asking permission, on every session and after every push to a PR branch. Apply the following loop:
+The repo has two layers of automation for Codex review feedback:
+
+- **CI layer:** `.github/workflows/codex-review-loop.yml` runs Claude Code on every PR review submitted by `chatgpt-codex-connector`, on every per-line review comment from that bot, and on any comment that mentions `@claude`. The workflow requires a repo secret (`ANTHROPIC_API_KEY` or `CLAUDE_CODE_OAUTH_TOKEN`). See D-0022 for the authorization of this CI exception.
+- **Interactive layer (this file):** Whenever a Claude Code session is running locally in this repo and a PR has unresolved Codex review threads, address them automatically per the loop below.
+
+Apply the following loop in both layers, without asking permission, on every session and after every push to a PR branch:
 
 1. **Detect.** Run `gh pr view <PR#> --json url,number,reviewThreads` (or the GraphQL equivalent) to list threads. If `<PR#>` is omitted, GitHub CLI resolves it from the current branch.
 2. **Triage each unresolved thread.** For each thread, either:
