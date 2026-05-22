@@ -138,12 +138,19 @@ Run this protocol at the beginning of every ATLAS work session, in both local-ag
 
 Run this protocol at the end of every ATLAS work session that produced changes.
 
+Steps 1 through 5 are mode-independent and must run in every session.
+
 1. Update `09_HANDOFFS/SESSION_HANDOFF.md` using `09_HANDOFFS/SESSION_HANDOFF_TEMPLATE.md`.
 2. Record: session date, current phase, session objective, files changed, completed work, decisions made, open items, risks, recommended next phase, and the next best prompt.
 3. Complete the safety review checklist in the handoff.
-4. If decisions were made, append them to `10_DECISION_LOG/DECISION_LOG.md`.
+4. If decisions were made, append them to `10_DECISION_LOG/DECISION_LOG.md` during the same session. Do not defer.
 5. Confirm no employer-sensitive material entered any file or chat transcript.
-6. Commit changes on a feature branch with a Conventional Commits message; never commit directly to `main`.
+
+Step 6 is mode-gated.
+
+6. Commit and version control:
+   - **Local-agent mode:** Commit changes on a feature branch with a Conventional Commits message; never commit directly to `main`.
+   - **Chat-only mode:** The assistant cannot commit. Hand Tom the exact files, paths, and a suggested Conventional Commits message, and treat the commit as a human follow-up that Tom must perform on his local machine before the session is fully done.
 
 ## Continuity protocol for local-agent vs chat-only usage
 
@@ -159,9 +166,11 @@ ATLAS must remain usable in two modes.
 **Chat-only mode** (assistant cannot reach the filesystem):
 
 - Ask Tom to paste the contents of `MASTER_CONTEXT.md` and `SESSION_HANDOFF.md`.
+- If a phase prompt file is referenced (typically a file under `05_PROMPTS/PHASE_PROMPTS/`), ask Tom to paste that file's full contents before producing any phase work; do not run the phase from memory or partial recall.
+- If the work touches `10_DECISION_LOG/DECISION_LOG.md`, ask Tom to paste its current contents before proposing new entries so IDs and status stay consistent.
 - Produce full Markdown file contents or precise patch instructions with exact save paths.
 - Do not assume any file write actually happened until Tom confirms.
-- Produce the updated `SESSION_HANDOFF.md` content as a copy-paste block for Tom to save manually.
+- Produce the updated `SESSION_HANDOFF.md` and any `DECISION_LOG.md` additions as copy-paste blocks for Tom to save manually.
 
 In both modes, do not invent file paths or employer-specific facts, and do not skip the safety boundary restatement.
 

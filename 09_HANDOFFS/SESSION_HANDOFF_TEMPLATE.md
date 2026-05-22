@@ -65,6 +65,8 @@ Confirm:
 - [ ] Every artifact has a clear purpose and an obvious human review step where relevant.
 - [ ] No artifact assumes access or data Tom may not have during clearance-limited onboarding.
 - [ ] This handoff file is up to date and contains the next best prompt.
+- [ ] Significant decisions from this session are logged in `10_DECISION_LOG/DECISION_LOG.md` in this same session (not deferred).
+- [ ] Mode-gated commit step from the session-end protocol is satisfied: local-agent mode committed on a feature branch, or chat-only mode produced a copy-paste commit instruction for Tom.
 
 ## Open items
 

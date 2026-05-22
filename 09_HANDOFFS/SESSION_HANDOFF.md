@@ -25,9 +25,10 @@ Confirm:
 
 | Path | Type of change | Summary |
 |---|---|---|
-| `00_MASTER_CONTEXT/MASTER_CONTEXT.md` | updated | Added phase list 0 through 12, session-start protocol, session-end protocol, continuity protocol for local-agent vs chat-only usage, and definition of done for future sessions. Updated current build stage and immediate objective. Added tiebreaker rule for MASTER_CONTEXT vs SESSION_HANDOFF. |
+| `00_MASTER_CONTEXT/MASTER_CONTEXT.md` | updated | Added phase list 0 through 12, session-start protocol, session-end protocol (with mode-gated commit step), continuity protocol for local-agent vs chat-only usage (with explicit asks for phase prompt and decision log in chat-only mode), and definition of done for future sessions. Updated current build stage and immediate objective. Added tiebreaker rule for MASTER_CONTEXT vs SESSION_HANDOFF. |
 | `09_HANDOFFS/SESSION_HANDOFF.md` | updated | Rewritten to reflect Phase 1 completion using the new template structure. |
-| `09_HANDOFFS/SESSION_HANDOFF_TEMPLATE.md` | updated | Expanded into a fuller reusable continuity template: source-of-truth review checklist, files-changed table, decisions table, safety review, definition-of-done check, risks, AI tooling notes, and a parameterized next-best-prompt block. |
+| `09_HANDOFFS/SESSION_HANDOFF_TEMPLATE.md` | updated | Expanded into a fuller reusable continuity template: source-of-truth review checklist, files-changed table, decisions table, safety review, definition-of-done check (now includes a decision-log criterion and a mode-gated commit criterion), risks, AI tooling notes, and a parameterized next-best-prompt block. |
+| `10_DECISION_LOG/DECISION_LOG.md` | updated | Added entries D-0006 through D-0012 capturing the Phase 1 decisions: phase list location, session-start/end protocols, precedence rule, expanded handoff template, mode-gated commit step, chat-only paste requirements, and the decision to leave skill files unchanged. |
 
 The three local skill files (`skills/atlas-planner/SKILL.md`, `skills/atlas-artifact-writer/SKILL.md`, `skills/atlas-session-handoff/SKILL.md`) were reviewed and left as-is. They already align with the strengthened protocols and require no edits in this phase.
 
@@ -53,7 +54,7 @@ The three local skill files (`skills/atlas-planner/SKILL.md`, `skills/atlas-arti
 | Leave the three `skills/*/SKILL.md` files unchanged for now. | They already align with the strengthened protocols. Edits would be cosmetic and outside Phase 1 scope. | `skills/` |
 | Work on a feature branch `feat/phase-01-master-context-continuity` and not on `main`. | Branch-protection guardrail and the global "never edit main directly" rule. | Git |
 
-If these decisions are still durable after Phase 2, mirror them into `10_DECISION_LOG/DECISION_LOG.md` during the next session.
+These decisions have been logged in this session as `D-0006` through `D-0012` in `10_DECISION_LOG/DECISION_LOG.md`. The set also includes two decisions added in response to Codex review on PR #1 (mode-gated commit step, and chat-only mode must request the phase prompt and decision log contents).
 
 ## Safety review
 
@@ -83,7 +84,6 @@ Confirm:
 
 - Phase 2 needs to sequence the Phase 0 through Phase 12 list into a milestone roadmap with target completion checkpoints and acceptance criteria.
 - Phase 2 needs to populate `03_BACKLOG/ARTIFACT_BACKLOG.md` with prioritized templates, workflows, prompts, dashboards, checklists, and demos.
-- After Phase 2, append the Phase 1 decisions to `10_DECISION_LOG/DECISION_LOG.md` if it exists; otherwise initialize it during Phase 3 (Governance).
 - Reconfirm assumptions about Gemini Enterprise, Google Workspace, and Microsoft Project after Tom's onboarding starts; revise `MASTER_CONTEXT.md` if any assumption is wrong.
 
 ## Risks and cautions
