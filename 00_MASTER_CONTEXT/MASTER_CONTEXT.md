@@ -6,7 +6,7 @@
 **Meaning:** AI-enabled Tactical Learning, Automation, and Systems  
 **Local target path:** `C:\Users\thalf\OneDrive\Documents\ATLAS-PM-Ops-OS`  
 **Primary format:** Markdown-first local operating system  
-**Current build stage:** Phase 2 - Roadmap and Artifact Backlog
+**Current build stage:** Phase 3 - Governance and Tool Approval Strategy (complete)
 
 ATLAS PM/Ops OS is a durable, local, repo-style operating system for project management, operations, project controls, and responsible AI workflow integration. It is not an app. It is not a database. It is not a deployment project. It is a structured body of working context, templates, workflows, prompts, governance notes, synthetic demos, and handoff files.
 
@@ -211,4 +211,4 @@ Every ATLAS artifact should be:
 
 ## Immediate objective
 
-Phase 2 turns the phase list above into a sequenced milestone roadmap (`02_ROADMAP/ROADMAP.md`) with per-phase detail and a single ordered artifact backlog (`03_BACKLOG/ARTIFACT_BACKLOG.md`) with a uniform field set per artifact, plus a light alignment pass on `01_MASTER_PLAN/MASTER_PLAN.md`. The next objective is Phase 3: Governance and Tool Approval Strategy, which will strengthen `06_GOVERNANCE/AI_GOVERNANCE_NOTES.md` and add a tool approval strategy, a data sensitivity decision model, a human review and auditability model, and a safe AI conversation guide. Phase 4 (workflow library) and Phase 5 (prompt library) must wait on Phase 3 so they can inherit a common human review point pattern and data envelope.
+Phase 3 strengthens `06_GOVERNANCE/AI_GOVERNANCE_NOTES.md` and adds six sibling files under `06_GOVERNANCE/` (`AI_TOOL_APPROVAL_STRATEGY.md`, `DATA_SENSITIVITY_DECISION_MODEL.md`, `HUMAN_REVIEW_AND_AUDITABILITY_MODEL.md`, `EMPLOYER_TOOL_APPROVAL_QUESTION_SET.md`, `AI_CONVERSATION_GUIDE.md`, `PROMPT_AND_OUTPUT_RETENTION_NOTE.md`) to provide the conservative AI governance envelope - data classification model, review intensities, approval pattern, conversation pattern, and retention defaults - that all later phases inherit. The next objective is Phase 4: Workflow Library, which will build the manual-first PM/Ops workflows on top of the Phase 3 governance bundle (each workflow citing the data sensitivity model, the review intensity, and the human review point pattern by name). Phase 5 (prompt library) follows Phase 4 and inherits the same envelope.
