@@ -1,0 +1,127 @@
+# MASTER_CONTEXT.md
+
+## Project identity
+
+**Project name:** ATLAS PM/Ops OS  
+**Meaning:** AI-enabled Tactical Learning, Automation, and Systems  
+**Local target path:** `C:\Users\thalf\OneDrive\Documents\ATLAS-PM-Ops-OS`  
+**Primary format:** Markdown-first local operating system  
+**Current build stage:** Phase 0 scaffold and starter content
+
+ATLAS PM/Ops OS is a durable, local, repo-style operating system for project management, operations, project controls, and responsible AI workflow integration. It is not an app. It is not a database. It is not a deployment project. It is a structured body of working context, templates, workflows, prompts, governance notes, synthetic demos, and handoff files.
+
+## User context
+
+Tom Halfman, PMP has accepted a Project Manager / Operations Specialist role in Motorola Solutions Applied Technology in Schaumburg. The environment is federal/defense-adjacent and requires a U.S. security clearance. Until the clearance process is complete, access may be limited and Tom may be physically separated from cleared work areas.
+
+Tom is not entering as the deepest RF engineer. His value proposition is PM/Ops and project-controls discipline combined with AI/ML fluency. He should position himself around project integrity, schedule and budget governance, EVM support, project accounting reconciliation, reporting quality, process compliance, discrepancy resolution, lessons learned, SOPs, dashboards, repeatable operating systems, and responsible AI workflow integration.
+
+## AI value context
+
+During the hiring process, the employer made clear that Tom's AI expertise is part of the expected value he brings. ATLAS should treat AI integration as a major workstream, not a side interest.
+
+The goal is practical improvement, not hype. The system should identify and shape AI-enabled improvements that help with:
+
+- Weekly status reporting
+- Meeting notes to action items
+- Action item aging and owner follow-up
+- Microsoft Project schedule health review
+- Schedule variance narratives
+- EVM variance explanation support
+- Risk register cleanup
+- Issue and discrepancy triage
+- Project accounting reconciliation narratives
+- Lessons learned capture
+- SOP draft generation
+- Executive brief generation
+- Cross-tool data mismatch investigation
+- Google Drive, Docs, and Sheets knowledge workflows
+- Clearance-limited onboarding workflows
+
+## Known environment assumptions
+
+These assumptions are working assumptions only. They must be validated after onboarding and adjusted when better information is available.
+
+- Gemini Enterprise may be the only approved AI tool at first.
+- Google Workspace is likely common.
+- Microsoft Project is used.
+- Excel and internal reporting systems are likely used.
+- Claude, OpenAI, Codex, APIs, CLI tools, and MCP may not be approved at work initially.
+- Employer approval, data handling rules, and security requirements override all personal preferences.
+
+## Strict safety boundary
+
+All pre-start and personal ATLAS work must use only:
+
+- Synthetic data
+- Public information
+- Generic examples
+- Fictional project scenarios
+- Non-proprietary templates
+- User-created fictional examples
+
+ATLAS must never request, store, summarize, transform, or process the following in personal tools or unapproved systems:
+
+- Classified data
+- CUI
+- ITAR or export-controlled data
+- Proprietary employer data
+- Customer data
+- Contract data
+- Internal schedules
+- Internal financials
+- Internal technical documents
+- Nonpublic program names
+- Real meeting notes
+- Real project accounting exports
+- Real employer Microsoft Project files
+- Any employer data not explicitly approved for the specific tool and workflow
+
+## Default operating posture
+
+- Human-in-the-loop
+- Audit-friendly
+- Approved-tool-first
+- Gemini-first and platform-agnostic
+- No shadow IT
+- No autonomous decisions
+- No sensitive data in personal tools
+- Clear separation between personal preparation and employer-deployable artifacts
+- AI supports PM/Ops judgment; AI does not replace accountable human decision-making
+
+## Source-of-truth hierarchy
+
+When continuing ATLAS work, use the following source-of-truth order:
+
+1. `00_MASTER_CONTEXT/MASTER_CONTEXT.md` for durable identity, constraints, positioning, and safety rules.
+2. `09_HANDOFFS/SESSION_HANDOFF.md` for current status, most recent decisions, open items, and next best prompt.
+3. `01_MASTER_PLAN/MASTER_PLAN.md` for phase structure and acceptance criteria.
+4. `02_ROADMAP/ROADMAP.md` for milestone sequencing.
+5. `03_BACKLOG/ARTIFACT_BACKLOG.md` for specific work items.
+6. Governance, workflow, prompt, template, demo, decision, and skill files as needed.
+
+## Artifact quality standards
+
+Every ATLAS artifact should be:
+
+- Safe for pre-start use
+- Generic or synthetic unless explicitly approved otherwise
+- Practical for PM/Ops execution
+- Short enough to use under time pressure
+- Structured enough to reuse
+- Portable across Gemini, Google Workspace, Microsoft tools, and future approved systems
+- Clear about assumptions, inputs, outputs, owners, and human approval points
+
+## What ATLAS should avoid
+
+- Building an app before there is a manual operating model
+- Creating package dependencies, deployment files, databases, APIs, or code scaffolds without explicit instruction
+- Inventing employer-specific facts
+- Pretending to know internal processes before onboarding
+- Using real employer data in personal tools
+- Creating workflows that require shadow IT
+- Allowing AI to make commitments, decisions, or official claims without human review
+
+## Immediate objective
+
+Complete Phase 0 by creating the initial scaffold and starter files. The initial output should give Tom a safe, structured foundation for Phase 1: Master Context and Continuity System.
