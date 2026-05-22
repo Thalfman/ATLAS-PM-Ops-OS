@@ -6,43 +6,46 @@
 
 ## Current phase
 
-**Phase 0: Project Setup and Operating Rules**
+**Phase 0 follow-on: Phase Prompt Pack added**
 
 ## Current status
 
-Phase 0 scaffold and starter content have been created for ATLAS PM/Ops OS. The system is now a Markdown-first local operating system with master context, master plan, roadmap, backlog, workflow library, prompt library, governance notes, templates, synthetic demo, decision log, and local skills.
+The ATLAS PM/Ops OS Phase 0 scaffold has been installed locally, and a complete phase prompt pack has been prepared for addition to the repo.
 
-No real employer data was used. All examples are generic, synthetic, or fictional. The system is designed around Tom Halfman's PM/Ops/project-controls value proposition and the expected AI integration value area for the Motorola Solutions Applied Technology role.
+The new phase prompt pack is intended to live under:
 
-## Files created in Phase 0
+```text
+05_PROMPTS/PHASE_PROMPTS/
+```
 
-- `README.md`
-- `00_MASTER_CONTEXT/MASTER_CONTEXT.md`
-- `01_MASTER_PLAN/MASTER_PLAN.md`
-- `02_ROADMAP/ROADMAP.md`
-- `03_BACKLOG/ARTIFACT_BACKLOG.md`
-- `04_WORKFLOWS/WORKFLOW_LIBRARY.md`
-- `05_PROMPTS/PROMPT_LIBRARY.md`
-- `06_GOVERNANCE/AI_GOVERNANCE_NOTES.md`
-- `07_TEMPLATES/FIRST_WEEK_DISCOVERY_SCRIPT.md`
-- `07_TEMPLATES/EXECUTIVE_NARRATIVE.md`
-- `08_SYNTHETIC_DEMOS/SYNTHETIC_STATUS_PACK_DEMO.md`
-- `09_HANDOFFS/SESSION_HANDOFF.md`
-- `09_HANDOFFS/SESSION_HANDOFF_TEMPLATE.md`
-- `10_DECISION_LOG/DECISION_LOG.md`
-- `skills/atlas-planner/SKILL.md`
-- `skills/atlas-artifact-writer/SKILL.md`
-- `skills/atlas-session-handoff/SKILL.md`
+It contains one Markdown prompt for each phase from Phase 0 through Phase 12, plus an index and folder README. The prompts are designed to keep future work Markdown-first, Gemini-first, platform-agnostic, human-in-the-loop, approved-tool-first, and safe for a federal/defense-adjacent PM/Ops environment.
+
+## Files added by this prompt-pack update
+
+- `05_PROMPTS/PHASE_PROMPTS/README.md`
+- `05_PROMPTS/PHASE_PROMPTS/PHASE_PROMPT_INDEX.md`
+- `05_PROMPTS/PHASE_PROMPTS/PHASE_00_PROJECT_SETUP_AND_OPERATING_RULES.md`
+- `05_PROMPTS/PHASE_PROMPTS/PHASE_01_MASTER_CONTEXT_AND_CONTINUITY_SYSTEM.md`
+- `05_PROMPTS/PHASE_PROMPTS/PHASE_02_ROADMAP_AND_ARTIFACT_BACKLOG.md`
+- `05_PROMPTS/PHASE_PROMPTS/PHASE_03_GOVERNANCE_AND_TOOL_APPROVAL_STRATEGY.md`
+- `05_PROMPTS/PHASE_PROMPTS/PHASE_04_WORKFLOW_LIBRARY.md`
+- `05_PROMPTS/PHASE_PROMPTS/PHASE_05_PROMPT_LIBRARY.md`
+- `05_PROMPTS/PHASE_PROMPTS/PHASE_06_FIRST_WEEK_READINESS_KIT.md`
+- `05_PROMPTS/PHASE_PROMPTS/PHASE_07_SYNTHETIC_DEMO_PACK.md`
+- `05_PROMPTS/PHASE_PROMPTS/PHASE_08_MICROSOFT_PROJECT_AND_SCHEDULE_INTEGRITY_TRACK.md`
+- `05_PROMPTS/PHASE_PROMPTS/PHASE_09_EVM_FINANCE_AND_PROJECT_ACCOUNTING_TRACK.md`
+- `05_PROMPTS/PHASE_PROMPTS/PHASE_10_SOP_AND_LESSONS_LEARNED_TRACK.md`
+- `05_PROMPTS/PHASE_PROMPTS/PHASE_11_EMPLOYER_MIGRATION_PLAN.md`
+- `05_PROMPTS/PHASE_PROMPTS/PHASE_12_FINAL_OPERATING_SYSTEM_REVIEW.md`
 
 ## Decisions made
 
 | Decision | Rationale |
 |---|---|
-| ATLAS is Markdown-first, not an app. | The immediate need is durable PM/Ops thinking, templates, and workflows, not software infrastructure. |
-| Gemini-first but platform-agnostic. | Gemini Enterprise may be the first approved workplace AI tool, but the system should migrate to any approved platform. |
-| No employer data in personal/pre-start work. | Federal/defense-adjacent environment requires conservative data handling. |
-| Human-in-the-loop by default. | AI should support PM/Ops judgment, not replace accountability. |
-| Phase 0 creates useful starter files, not empty boilerplate. | Future sessions need enough context to continue without restarting. |
+| Store all phase prompts under `05_PROMPTS/PHASE_PROMPTS/`. | Keeps build prompts inside the existing prompt library without changing the top-level scaffold. |
+| Keep each phase prompt in its own Markdown file. | Makes each phase easy to run independently and easy to preserve in the local repo. |
+| Make prompts self-contained but still source-of-truth aware. | Future sessions can use `MASTER_CONTEXT.md` and `SESSION_HANDOFF.md`, but each prompt also carries the core safety and role context. |
+| Keep all prompts Markdown-first and non-software. | ATLAS is an operating system of PM/Ops artifacts, not an app. |
 
 ## Current safety boundary
 
@@ -52,20 +55,21 @@ Do not use classified, CUI, ITAR/export-controlled, proprietary, customer, contr
 
 ## Open items
 
-1. Harden `MASTER_CONTEXT.md` so it becomes the stable source of truth for all future sessions.
-2. Refine the session-start and session-end ritual.
-3. Expand `SESSION_HANDOFF_TEMPLATE.md` into a stronger continuity format.
-4. Prioritize backlog items for first-week readiness and synthetic demos.
-5. Convert governance notes into an employer-facing AI/tool approval discussion guide.
+1. Install the phase prompt pack into the local repo.
+2. Begin Phase 1 using `05_PROMPTS/PHASE_PROMPTS/PHASE_01_MASTER_CONTEXT_AND_CONTINUITY_SYSTEM.md`.
+3. Harden `MASTER_CONTEXT.md` and the session continuity protocol.
+4. Continue to update `SESSION_HANDOFF.md` after every significant build session.
 
 ## Recommended next phase
 
 **Phase 1: Master Context and Continuity System**
 
-Focus on making the system easy to resume and hard to misuse. The next session should refine continuity rules, handoff structure, and local skills before expanding the workflow library.
-
 ## Next best prompt
 
+Use this file:
+
 ```text
-Continue ATLAS PM/Ops OS from the existing files. Read 00_MASTER_CONTEXT/MASTER_CONTEXT.md and 09_HANDOFFS/SESSION_HANDOFF.md as the source of truth. Begin Phase 1: Master Context and Continuity System. Harden MASTER_CONTEXT.md, SESSION_HANDOFF_TEMPLATE.md, and the three skill files so future sessions can resume without restarting and always preserve the safety boundary: no real employer data, no CUI, no ITAR/export-controlled data, no classified data, no proprietary/customer/contract/internal schedule/internal finance/internal technical data in personal or unapproved tools. Keep the system Markdown-first, Gemini-first, platform-agnostic, human-in-the-loop, and PM/Ops outcome-focused. End by updating 09_HANDOFFS/SESSION_HANDOFF.md.
+05_PROMPTS/PHASE_PROMPTS/PHASE_01_MASTER_CONTEXT_AND_CONTINUITY_SYSTEM.md
 ```
+
+Copy the prompt block from that Markdown file and run it in the next ATLAS session.
