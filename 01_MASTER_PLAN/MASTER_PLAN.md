@@ -72,21 +72,21 @@ Phase 0 is complete when:
 
 ## Near-term build sequence
 
-### Session A: Phase 0 scaffold
+### Session A: Phase 0 scaffold (complete)
 
 Create the initial repository structure and starter files. Avoid depth where it would create false specificity. Include enough content for the next session to continue without restating context.
 
-### Session B: Phase 1 continuity hardening
+### Session B: Phase 1 continuity hardening (complete)
 
-Refine `MASTER_CONTEXT.md`, `SESSION_HANDOFF_TEMPLATE.md`, and the three local skills. Define the exact session-start/session-end ritual and how future changes should be summarized.
+Refine `MASTER_CONTEXT.md` and `SESSION_HANDOFF_TEMPLATE.md`. Define the exact session-start and session-end protocols (including mode-gated commit and chat-only paste requirements) and the precedence rule for resolving conflicts between durable context and current status. Local skill files reviewed and left as-is; revisit in Phase 4 once workflow patterns stabilize (see A-0029 in the backlog).
 
-### Session C: Phase 2 backlog prioritization
+### Session C: Phase 2 roadmap and artifact backlog (in progress)
 
-Convert the artifact backlog into a sequenced build list. Identify first-week readiness artifacts, synthetic demo artifacts, and employer-migration artifacts.
+Update `02_ROADMAP/ROADMAP.md` to cover Phases 0 through 12 with purpose, key files, PM/Ops outcomes, AI integration relevance, safety and governance considerations, completion criteria, and dependencies. Update `03_BACKLOG/ARTIFACT_BACKLOG.md` to a single ordered list with the standard field set (ID, artifact, category, phase, priority, purpose, intended user, data sensitivity posture, target environment assumption, human review point, status, notes/dependencies) across the standard categories.
 
 ### Session D: Phase 3 governance and approval strategy
 
-Turn governance notes into an approval-ready framework: data boundary, tool approval questions, human review model, and migration readiness checklist.
+Turn governance notes into an approval-ready framework: data sensitivity decision model, tool approval strategy, human review and auditability model, AI conversation guide, and a prompt and output retention note. Phase 4 workflows and Phase 5 prompts must wait on this so they can inherit a consistent envelope.
 
 ## Definition of done for any ATLAS artifact
 
@@ -116,7 +116,11 @@ An artifact is done when it:
 For every meaningful work session:
 
 1. Start with `MASTER_CONTEXT.md` and `SESSION_HANDOFF.md`.
-2. Identify the current phase and target artifact.
+2. Identify the current phase and target artifact (the roadmap and backlog are the catalog).
 3. Make the smallest useful improvement.
-4. Record decisions in `10_DECISION_LOG/DECISION_LOG.md` when they affect the system direction.
-5. Update `09_HANDOFFS/SESSION_HANDOFF.md` before stopping.
+4. Record decisions in `10_DECISION_LOG/DECISION_LOG.md` in the same session when they affect the system direction. Do not defer.
+5. Update `09_HANDOFFS/SESSION_HANDOFF.md` before stopping, including the next best prompt.
+
+## Source-of-truth alignment
+
+`MASTER_CONTEXT.md` holds the phase list, protocols, and safety boundary; `MASTER_PLAN.md` (this file) holds the build rules, phase scope summaries, and definition of done; `ROADMAP.md` holds the per-phase detail (purpose, outcomes, AI relevance, safety, completion criteria, dependencies); `ARTIFACT_BACKLOG.md` holds the single ordered list of artifacts. When these disagree, `MASTER_CONTEXT.md` wins on durable identity and safety, `SESSION_HANDOFF.md` wins on current status and next best prompt, and `ROADMAP.md` and `ARTIFACT_BACKLOG.md` are the canonical sources for per-phase detail and per-artifact fields, respectively.

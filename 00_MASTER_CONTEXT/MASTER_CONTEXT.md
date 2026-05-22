@@ -6,7 +6,7 @@
 **Meaning:** AI-enabled Tactical Learning, Automation, and Systems  
 **Local target path:** `C:\Users\thalf\OneDrive\Documents\ATLAS-PM-Ops-OS`  
 **Primary format:** Markdown-first local operating system  
-**Current build stage:** Phase 1 - Master Context and Continuity System
+**Current build stage:** Phase 2 - Roadmap and Artifact Backlog
 
 ATLAS PM/Ops OS is a durable, local, repo-style operating system for project management, operations, project controls, and responsible AI workflow integration. It is not an app. It is not a database. It is not a deployment project. It is a structured body of working context, templates, workflows, prompts, governance notes, synthetic demos, and handoff files.
 
@@ -100,7 +100,7 @@ When continuing ATLAS work, use the following source-of-truth order:
 5. `03_BACKLOG/ARTIFACT_BACKLOG.md` for specific work items.
 6. Governance, workflow, prompt, template, demo, decision, and skill files as needed.
 
-If `MASTER_CONTEXT.md` and `SESSION_HANDOFF.md` disagree, treat `MASTER_CONTEXT.md` as authoritative for durable identity, scope, safety, and posture. Treat `SESSION_HANDOFF.md` as authoritative for current status, the most recent phase, and the next best prompt.
+If `MASTER_CONTEXT.md` and `SESSION_HANDOFF.md` disagree, treat `MASTER_CONTEXT.md` as authoritative for durable identity, scope, safety, and posture. Treat `SESSION_HANDOFF.md` as authoritative for current status, the most recent phase, and the next best prompt. Treat `02_ROADMAP/ROADMAP.md` as authoritative for per-phase detail (purpose, outcomes, AI relevance, safety, completion criteria, dependencies). Treat `03_BACKLOG/ARTIFACT_BACKLOG.md` as authoritative for per-artifact fields (purpose, intended user, data sensitivity posture, target environment assumption, human review point, status, notes).
 
 ## Phase list (Phase 0 through Phase 12)
 
@@ -211,4 +211,4 @@ Every ATLAS artifact should be:
 
 ## Immediate objective
 
-Phase 1 hardens the durable context, session handoff process, and continuity protocols so future ATLAS sessions can resume cleanly in either local-agent or chat-only mode without restarting. The next objective is Phase 2: Roadmap and Artifact Backlog, which will turn the phase list above into a sequenced milestone roadmap and a prioritized backlog of templates, workflows, prompts, and demos.
+Phase 2 turns the phase list above into a sequenced milestone roadmap (`02_ROADMAP/ROADMAP.md`) with per-phase detail and a single ordered artifact backlog (`03_BACKLOG/ARTIFACT_BACKLOG.md`) with a uniform field set per artifact, plus a light alignment pass on `01_MASTER_PLAN/MASTER_PLAN.md`. The next objective is Phase 3: Governance and Tool Approval Strategy, which will strengthen `06_GOVERNANCE/AI_GOVERNANCE_NOTES.md` and add a tool approval strategy, a data sensitivity decision model, a human review and auditability model, and a safe AI conversation guide. Phase 4 (workflow library) and Phase 5 (prompt library) must wait on Phase 3 so they can inherit a common human review point pattern and data envelope.
