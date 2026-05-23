@@ -196,7 +196,7 @@ Every backlog row uses the same field set:
 
 Phase 4 (workflow library) is `Ready for personal use` for the 15 workflows the Phase 4 prompt enumerates. The library lives under `04_WORKFLOWS/` as an index (`WORKFLOW_LIBRARY.md`), a reusable template (`WORKFLOW_CARD_TEMPLATE.md`), and 15 per-workflow files `W-01` through `W-15`. Three new backlog rows (A-0066 EVM Variance Explanation; A-0067 Executive Brief Generation; A-0068 Clearance-Limited Onboarding) were added in Phase 4 per D-0032. A-0038 (Process Gap Note) remains `Not started` for a follow-up session - not in the Phase 4 prompt's minimum 15.
 
-Phase 5 (prompt library) is next: author Gemini-first prompts that pair against the 15 W-NN workflow cards. Each prompt cites the same Phase 3 governance bundle and the matching workflow card by W-ID. The backlog rows A-0018, A-0019, A-0039 through A-0047 are the Phase 5 prompts; they pair against the workflow IDs noted in each W-NN file's §15 "Cross-references" section.
+Phase 5 (prompt library) is next: author Gemini-first prompts that pair against 11 of the 15 W-NN workflow cards (the AI-drafting workflows: W-01, W-02, W-03, W-05, W-06, W-07, W-08, W-09, W-10, W-11, W-12). The other four cards (W-04, W-13, W-14, W-15) carry "Paired Phase 5 prompt: none" in their §15 by design per D-0034; Phase 5 must not invent additional prompts to force a 15/15 pairing. The backlog defines exactly 11 Phase 5 prompt rows (A-0018, A-0019, A-0039 through A-0047); each prompt cites the same Phase 3 governance bundle and the matching workflow card by W-ID. Pairings are listed in each paired W-NN file's §15 "Cross-references" section.
 
 ## Backlog hygiene rules
 
