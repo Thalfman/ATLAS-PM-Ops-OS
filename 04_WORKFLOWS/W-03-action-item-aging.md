@@ -122,5 +122,5 @@ Escalation triggers (stop iterating the AI draft, go to a human):
 
 - Phase 3 governance: `06_GOVERNANCE/DATA_SENSITIVITY_DECISION_MODEL.md`, `06_GOVERNANCE/HUMAN_REVIEW_AND_AUDITABILITY_MODEL.md`, `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`, `06_GOVERNANCE/AI_GOVERNANCE_NOTES.md`.
 - Backlog row: `03_BACKLOG/ARTIFACT_BACKLOG.md` A-0010.
-- Paired Phase 5 prompt: A-0041 Action Aging Summary Prompt (TBD in Phase 5).
+- Paired Phase 5 prompt: P-03 Action Aging Summary (`05_PROMPTS/P-03-action-aging-summary.md`, backlog A-0041).
 - Related workflows: W-02 (meeting notes to actions), W-08 (issue and discrepancy triage).

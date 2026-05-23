@@ -120,6 +120,6 @@ Escalation triggers (stop iterating the AI draft, go to a human):
 
 - Phase 3 governance: `06_GOVERNANCE/DATA_SENSITIVITY_DECISION_MODEL.md`, `06_GOVERNANCE/HUMAN_REVIEW_AND_AUDITABILITY_MODEL.md`, `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`, `06_GOVERNANCE/AI_GOVERNANCE_NOTES.md`.
 - Backlog row: `03_BACKLOG/ARTIFACT_BACKLOG.md` A-0011.
-- Paired Phase 5 prompt: A-0042 Risk Register Cleanup Prompt (TBD in Phase 5).
+- Paired Phase 5 prompt: P-07 Risk Register Cleanup (`05_PROMPTS/P-07-risk-register-cleanup.md`, backlog A-0042).
 - Related demo: A-0052 Synthetic Risk Register Cleanup Demo (Phase 7).
 - Related workflows: W-08 (issue and discrepancy triage).

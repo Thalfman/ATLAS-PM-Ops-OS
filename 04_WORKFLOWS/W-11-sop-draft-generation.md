@@ -119,6 +119,6 @@ Escalation triggers (stop iterating the AI draft, go to a human):
 
 - Phase 3 governance: `06_GOVERNANCE/DATA_SENSITIVITY_DECISION_MODEL.md`, `06_GOVERNANCE/HUMAN_REVIEW_AND_AUDITABILITY_MODEL.md`, `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`, `06_GOVERNANCE/AI_GOVERNANCE_NOTES.md`.
 - Backlog row: `03_BACKLOG/ARTIFACT_BACKLOG.md` A-0014 (Phase 10 deliverable; this card is the Phase 4 workflow that pairs with it).
-- Paired Phase 5 prompt: A-0045 SOP First Draft Prompt (TBD in Phase 5).
+- Paired Phase 5 prompt: P-11 SOP First Draft (`05_PROMPTS/P-11-sop-first-draft.md`, backlog A-0045).
 - Related template: A-0057 SOP Template (Phase 10).
 - Related workflows: W-10 (lessons learned capture).

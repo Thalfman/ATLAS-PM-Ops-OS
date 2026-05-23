@@ -116,6 +116,6 @@ Escalation triggers (stop iterating the AI draft, go to a human):
 
 - Phase 3 governance: `06_GOVERNANCE/DATA_SENSITIVITY_DECISION_MODEL.md`, `06_GOVERNANCE/HUMAN_REVIEW_AND_AUDITABILITY_MODEL.md`, `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`, `06_GOVERNANCE/AI_GOVERNANCE_NOTES.md`.
 - Backlog row: `03_BACKLOG/ARTIFACT_BACKLOG.md` A-0036.
-- Paired Phase 5 prompt: A-0019 Project Accounting Reconciliation Narrative Template (TBD in Phase 5).
+- Paired Phase 5 prompt: P-09 Accounting Reconciliation Narrative (`05_PROMPTS/P-09-accounting-reconciliation-narrative.md`, backlog A-0019).
 - Related artifacts: A-0055 Project Accounting Reconciliation Walkthrough (Phase 9), A-0056 Accounting Discrepancy Triage Workflow (Phase 9).
 - Related workflows: W-06 (EVM variance explanation), W-13 (cross-tool mismatch).
