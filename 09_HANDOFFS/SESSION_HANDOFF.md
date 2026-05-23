@@ -6,11 +6,11 @@
 
 ## Current phase
 
-**Phase 7 - Synthetic Demo Pack (complete)**
+**Phase 8 - Microsoft Project and Schedule Integrity Track (complete)**
 
 ## Session objective
 
-Build the Synthetic Demo Pack defined by the Phase 7 prompt: harden the seeded A-0007 Synthetic Status Pack Demo with paired W-NN / P-NN structure and add the four not-started rows (A-0023 Synthetic Schedule Variance Demo, A-0024 Synthetic Action Tracker Demo, A-0051 Synthetic Discrepancy Triage Demo, A-0052 Synthetic Risk Register Cleanup Demo). Add a pack index (`SYNTHETIC_DEMO_PACK.md`) and a shared synthetic project scenario (`SYNTHETIC_PROJECT_SCENARIO.md`) — both utility files tracked in the pack index, not the backlog. Each demo opens with a bold synthetic label, walks input → AI step → human review → output as a pattern, cites the Phase 3 governance envelope by filename, and pairs against a specific Phase 4 W-NN and Phase 5 P-NN. No new backlog rows; five existing rows flipped to `Ready for personal use`. Phase 8 (Microsoft Project and Schedule Integrity Track) is next.
+Build the Phase 8 schedule integrity track: a generic schedule health review template (A-0015), a schedule variance narrative template (A-0016) pairing W-05 / P-05 and the Phase 7 variance demo, and a 24-task synthetic schedule workbook (A-0053) on Project Northstar Demo with critical path, slack, and constraints. Include a safe Microsoft Project data-handling note inlined in the health template. No new W-NN or P-NN added — Phase 8's value is in the substrate that existing W-04 / W-05 / P-05 cards point at. Phase 9 (EVM, Finance, and Project Accounting Track) is next.
 
 ## Source-of-truth review
 
@@ -19,48 +19,41 @@ Confirm:
 - [x] Read `00_MASTER_CONTEXT/MASTER_CONTEXT.md` at session start.
 - [x] Read the previous `09_HANDOFFS/SESSION_HANDOFF.md` at session start.
 - [x] Working directory confirmed as `C:\Users\thalf\OneDrive\Documents\ATLAS-PM-Ops-OS`.
-- [x] Phase prompt `05_PROMPTS/PHASE_PROMPTS/PHASE_07_SYNTHETIC_DEMO_PACK.md` consulted.
-- [x] Seeded `08_SYNTHETIC_DEMOS/SYNTHETIC_STATUS_PACK_DEMO.md` re-read before hardening.
-- [x] Phase 4 W-01, W-02, W-03, W-05, W-07, W-08, W-12 cards re-read to confirm paired-card structure and §7 output formats.
-- [x] Phase 5 P-01, P-02, P-03, P-05, P-07, P-08, P-12 prompt cards confirmed by filename for citation in each demo's AI step.
-- [x] Phase 3 governance bundle confirmed (`DATA_SENSITIVITY_DECISION_MODEL.md`, `HUMAN_REVIEW_AND_AUDITABILITY_MODEL.md`, `AI_TOOL_APPROVAL_STRATEGY.md`, `AI_GOVERNANCE_NOTES.md`).
+- [x] Phase prompt `05_PROMPTS/PHASE_PROMPTS/PHASE_08_MICROSOFT_PROJECT_AND_SCHEDULE_INTEGRITY_TRACK.md` consulted.
+- [x] Phase 4 W-04 (schedule health) and W-05 (schedule variance) cards confirmed for pairing.
+- [x] Phase 5 P-05 (schedule variance prompt) confirmed for pairing.
+- [x] Phase 7 schedule variance demo (`SYNTHETIC_SCHEDULE_VARIANCE_DEMO.md`) and shared scenario (`SYNTHETIC_PROJECT_SCENARIO.md`) confirmed as the backdrop the workbook extends.
 
 ## Files changed
 
 | Path | Type of change | Summary |
 |---|---|---|
-| `08_SYNTHETIC_DEMOS/SYNTHETIC_DEMO_PACK.md` | added | Pack index: pack rules, pack index table, in-conversation usage guidance, maintenance notes, cross-references. Mirrors the Phase 4 / 5 / 6 hybrid pattern. |
-| `08_SYNTHETIC_DEMOS/SYNTHETIC_PROJECT_SCENARIO.md` | added | Shared synthetic backdrop: Project Northstar Demo identity, fictional cast (PM/Ops, Team Lead, Workstream A / B / C Leads, Reporting Coordinator, Placeholder Owners), milestones M-01..M-06, workstreams A / B / C, governance envelope, binding synthetic data rules. Utility file tracked in the pack index per D-0048. |
-| `08_SYNTHETIC_DEMOS/SYNTHETIC_STATUS_PACK_DEMO.md` | updated | A-0007 hardened: added paired W-01 / W-12, paired P-01 / P-12, governance envelope citation, shared-scenario reference, full input → AI step → human review → output walkthrough, sign-off block, cross-demo references. |
-| `08_SYNTHETIC_DEMOS/SYNTHETIC_SCHEDULE_VARIANCE_DEMO.md` | added | A-0023: pairs W-05 / P-05, fictional schedule snapshot showing +2 to +4 day variances on Project Northstar Demo, AI draft, human-review against the "Schedule outputs" pattern, final narrative. |
-| `08_SYNTHETIC_DEMOS/SYNTHETIC_ACTION_TRACKER_DEMO.md` | added | A-0024: two halves on the same scenario — extraction (W-02 / P-02) from fictional meeting notes and aging (W-03 / P-03) from a fictional tracker snapshot. AI flags missing fields and ambiguous ownership; Tom resolves. |
-| `08_SYNTHETIC_DEMOS/SYNTHETIC_DISCREPANCY_TRIAGE_DEMO.md` | added | A-0051: pairs W-08 / P-08, six fictional issue notes, AI triage table without severity / owner assignments, Tom assigns. Cross-references the schedule variance demo and the action tracker demo. |
-| `08_SYNTHETIC_DEMOS/SYNTHETIC_RISK_REGISTER_CLEANUP_DEMO.md` | added | A-0052: pairs W-07 / P-07, seven-row fictional pre-cleanup register, AI flags retirement candidates and merge candidates without rewriting non-conditioned entries, owners decide. |
-| `03_BACKLOG/ARTIFACT_BACKLOG.md` | updated | Five synthetic-demos rows (A-0007, A-0023, A-0024, A-0051, A-0052) flipped from `Seeded` / `Not started` to `Ready for personal use` with Notes columns pointing at the demo file paths, the paired W-NN / P-NN, the per-domain review pattern, and the pack index. "Current build recommendation" tail rewritten to mark Phase 7 complete and name Phase 8 as next. |
-| `10_DECISION_LOG/DECISION_LOG.md` | updated | Appended D-0045..D-0048 covering the Phase 7 branch (canonical convention), the pack hybrid layout, the per-demo structure rules, and the shared-scenario utility-file status. |
-| `00_MASTER_CONTEXT/MASTER_CONTEXT.md` | updated | Bumped current build stage to "Phase 7 - Synthetic Demo Pack (complete)" and rewrote "Immediate objective" to describe the seven-file pack and name Phase 8 (Microsoft Project and Schedule Integrity Track) as next. |
+| `07_TEMPLATES/SCHEDULE_HEALTH_REVIEW_TEMPLATE.md` | added | A-0015 schedule health review template: A..L checklist (baseline, milestones, logic, constraints, lags, critical path, slack, owners, status date, late starts/finishes, forecast vs baseline, review limitations); inlined Microsoft Project data-handling note (D-0051); output shape; failure modes; migration notes. Pairs with W-04 and A-0053 workbook. |
+| `07_TEMPLATES/SCHEDULE_VARIANCE_NARRATIVE_TEMPLATE.md` | added | A-0016 schedule variance narrative template: 6-section narrative shape plus a mandatory number-trace appendix; quality checklist; failure modes; migration notes. Pairs with W-05 / P-05 / A-0047 prompt and the Phase 7 variance demo. |
+| `08_SYNTHETIC_DEMOS/SYNTHETIC_SCHEDULE_WORKBOOK.md` | added | A-0053 synthetic schedule workbook: 24 tasks across Workstreams A/B/C plus Mgmt on Project Northstar Demo, with baseline vs current dates, % complete, slack, critical path, two constraints (SNET 2026-06-01 on NS-A-04 and MFO 2026-06-12 on NS-M-06). Cross-references the Phase 7 demos and provides the substrate for the new Phase 8 templates. |
+| `03_BACKLOG/ARTIFACT_BACKLOG.md` | updated | Three Microsoft Project and schedule integrity rows (A-0015, A-0016, A-0053) flipped from `Not started` to `Ready for personal use` with Notes columns pointing at the new file paths and the paired W-NN / P-NN. "Current build recommendation" tail rewritten to mark Phase 8 complete and name Phase 9 as next. |
+| `10_DECISION_LOG/DECISION_LOG.md` | updated | Appended D-0049..D-0051 covering Phase 8 branch (canonical convention), the templates-plus-workbook sequencing without new W-NN / P-NN, and the inlined Microsoft Project data-handling note. |
+| `00_MASTER_CONTEXT/MASTER_CONTEXT.md` | updated | Bumped current build stage to "Phase 8 - Microsoft Project and Schedule Integrity Track (complete)" and rewrote the Immediate objective paragraph to describe the three Phase 8 files and name Phase 9 (EVM, Finance, and Project Accounting Track) as next. |
 
 ## Completed work
 
-- Authored `08_SYNTHETIC_DEMOS/SYNTHETIC_DEMO_PACK.md` as the pack index with pack rules, pack index table, in-conversation usage guidance, and maintenance notes.
-- Authored `08_SYNTHETIC_DEMOS/SYNTHETIC_PROJECT_SCENARIO.md` as the shared backdrop (utility per D-0048). Names the fictional cast, milestones, and workstreams that every demo draws from.
-- Authored four new demos (A-0023, A-0024, A-0051, A-0052), each with the four-step walkthrough, the governance envelope, the paired W-NN / P-NN, the per-domain review pattern, and cross-references to the other demos that share the scenario.
-- Hardened the seeded A-0007 demo: kept the original synthetic inputs intact and added the paired W-NN / P-NN structure, the governance envelope, the explicit walkthrough sections, and a sign-off block.
-- Reconciled `03_BACKLOG/ARTIFACT_BACKLOG.md`: five status flips, five Notes updates, "Current build recommendation" rewritten.
-- Logged four Phase 7 decisions in `10_DECISION_LOG/DECISION_LOG.md` (D-0045 through D-0048) in the same session.
-- Updated `00_MASTER_CONTEXT/MASTER_CONTEXT.md` to mark Phase 7 complete and name Phase 8 as the next objective.
-- Worked Phase 7 on branch `feat/phase-07-synthetic-demo-pack` per the canonical convention (D-0045), returning to the convention after the env-constrained Phase 4 / 5 / 6 branches.
+- Authored `07_TEMPLATES/SCHEDULE_HEALTH_REVIEW_TEMPLATE.md` (A-0015): A..L checklist covers baseline awareness, milestone integrity, logic and dependencies, constraints, lags and leads, critical path, float and slack, resource and owner clarity, status date and data date, late starts / finishes, forecast vs baseline variance, and review limitations. Inlined Microsoft Project data-handling note enforces no `.mpp` files or paraphrased real schedules in personal AI tools.
+- Authored `07_TEMPLATES/SCHEDULE_VARIANCE_NARRATIVE_TEMPLATE.md` (A-0016): six-section narrative shape (summary, what moved, apparent cause as observation, recovery posture, decisions needed, open questions) with a mandatory number-trace appendix at Standard intensity and Strict intensity.
+- Authored `08_SYNTHETIC_DEMOS/SYNTHETIC_SCHEDULE_WORKBOOK.md` (A-0053): 24-task synthetic schedule on Project Northstar Demo with baseline vs current dates, slack, critical path identification, two constraints, and findings illustrating the health template. Cross-references the Phase 7 demos (variance, discrepancy triage, risk register cleanup).
+- Reconciled `03_BACKLOG/ARTIFACT_BACKLOG.md`: three status flips, three Notes updates, "Current build recommendation" rewritten.
+- Logged three Phase 8 decisions in `10_DECISION_LOG/DECISION_LOG.md` (D-0049 through D-0051) in the same session.
+- Updated `00_MASTER_CONTEXT/MASTER_CONTEXT.md` to mark Phase 8 complete and name Phase 9 as the next objective.
+- Worked Phase 8 on branch `feat/phase-08-schedule-integrity` per the canonical convention (D-0049).
 
 ## Decisions made
 
 | Decision | Rationale | File or area impacted |
 |---|---|---|
-| Perform Phase 7 on branch `feat/phase-07-synthetic-demo-pack` per the canonical `CLAUDE.md` convention. | The environment did not pre-allocate a constrained branch for Phase 7; returning to the convention keeps the deviation pattern (D-0033, D-0039, D-0040) narrow rather than precedential. | Git. |
-| Structure Phase 7 as a hybrid: pack index + shared scenario + five per-demo files under `08_SYNTHETIC_DEMOS/`. | Per-demo files parallel the Phase 4 / 5 / 6 hybrids (D-0031, D-0037, D-0041); each demo names a specific paired W-NN / P-NN and a per-domain review pattern. | `08_SYNTHETIC_DEMOS/` layout. |
-| Every demo names paired W-NN / P-NN by ID, opens with a bold synthetic label, walks input → AI step → human review → output as a pattern, cites the Phase 3 envelope by filename. | Makes the migration path explicit, makes the demo a pattern rather than a product, and avoids restating policy at the demo layer. Mirrors D-0029 / D-0036 / D-0042. | All Phase 7 demo files. |
-| Shared synthetic project scenario authored once as `SYNTHETIC_PROJECT_SCENARIO.md`, tracked in the pack index, not the backlog. Parallel to P-00 / P-99 (D-0038) and the AI Integration Discussion Guide (D-0043). | One coherent backdrop makes demos walk-through-able; tracking utility files in pack indexes matches existing precedent. | `08_SYNTHETIC_DEMOS/SYNTHETIC_PROJECT_SCENARIO.md` and the pack index. |
+| Phase 8 on canonical `feat/phase-08-schedule-integrity` branch. | Continues the canonical-convention return from D-0045; no env-constrained branch was pre-allocated. | Git. |
+| Phase 8 deliverables sequenced as templates plus a synthetic workbook; no new W-NN or P-NN added. | Phase 4 / 5 cards already cover the workflow and prompt sides; Phase 8 adds the fillable substrate. | `07_TEMPLATES/` and `08_SYNTHETIC_DEMOS/`. |
+| Microsoft Project data-handling note inlined in the schedule health template rather than promoted to its own governance file. | Short, tightly coupled to the template's use; existing `06_GOVERNANCE/` files already cover the broader policy. | `07_TEMPLATES/SCHEDULE_HEALTH_REVIEW_TEMPLATE.md`. |
 
-These decisions are logged in this session as `D-0045` through `D-0048` in `10_DECISION_LOG/DECISION_LOG.md`, in the same order as the table above.
+These decisions are logged in this session as `D-0049` through `D-0051` in `10_DECISION_LOG/DECISION_LOG.md`.
 
 ## Safety review
 
@@ -72,49 +65,46 @@ Confirm:
 - [x] No ITAR or export-controlled data used.
 - [x] No proprietary, customer, contract, internal schedule, internal finance, or internal technical data used.
 - [x] No real program names, real meeting notes, real Microsoft Project files, or real project accounting exports used.
-- [x] All examples are obviously synthetic: Project Northstar Demo with fictional cast (PM/Ops, Team Lead, Workstream A / B / C Leads, Reporting Coordinator, Placeholder Owner 1 / 2 / 3), fictional milestones M-01..M-06, fictional activity IDs NS-A-01..03, NS-B-01..02, NS-C-01..02, fictional risk IDs R-001 / R-002, fictional issue IDs I-001 / I-002, fictional action IDs A-001..A-106. Every demo opens with a bold synthetic label.
-- [x] Human-in-the-loop posture preserved: every demo names the named human reviewer (Tom), cites the per-domain review pattern from `HUMAN_REVIEW_AND_AUDITABILITY_MODEL.md`, and shows AI flagging rather than inventing.
-- [x] Gemini-first and platform-agnostic posture preserved: demos use generic "AI assistant" / "Personal AI tool" framing and Gemini-first invocation language with no product-specific syntax.
+- [x] All examples are obviously synthetic: Project Northstar Demo, fictional cast (PM/Ops, Team Lead, Workstream A/B/C Leads, Reporting Coordinator), fictional activity IDs (NS-A-01..08, NS-B-01..05, NS-C-01..05, NS-M-01..06). The workbook's bold synthetic label disclaims any resemblance to real programs.
+- [x] Microsoft Project data-handling note explicitly forbids real `.mpp` files, real exports, paraphrased real schedules, and metadata leakage in any personal AI tool.
+- [x] Human-in-the-loop posture preserved: every template names a named human reviewer and forbids AI from changing dates, dependencies, or baselines.
+- [x] Gemini-first and platform-agnostic posture preserved: templates use generic "AI assistant" framing; the workbook is tool-agnostic Markdown with no `.mpp` artifact.
 - [x] No app, package, API, database, deployment, or code scaffolding added.
 
 ## Definition-of-done check
 
 Confirm:
 
-- [x] Every artifact created or updated is Markdown-first and portable.
-- [x] Every artifact has a clear purpose and an obvious human review step where relevant. Each demo's "Step 4 - Human review" section names the per-domain pattern and lists the reviewer's checks.
-- [x] No artifact assumes access or data Tom may not have. Every input is obviously synthetic.
+- [x] Every artifact created is Markdown-first and portable.
+- [x] Every artifact has a clear purpose and a named human review step.
+- [x] No artifact assumes access or data Tom may not have during clearance-limited onboarding. All inputs are obviously synthetic.
 - [x] This handoff file is up to date and contains the next best prompt.
-- [x] Significant decisions from this session are logged in `10_DECISION_LOG/DECISION_LOG.md` in this same session (entries `D-0045` through `D-0048`); none deferred.
-- [x] Mode-gated commit step from the session-end protocol is satisfied: local-agent mode commits Phase 7 changes on branch `feat/phase-07-synthetic-demo-pack` in small Conventional Commits and opens a PR against `main` at session end.
+- [x] Significant decisions logged in `10_DECISION_LOG/DECISION_LOG.md` in the same session (D-0049..D-0051); none deferred.
+- [x] Local-agent mode committed Phase 8 changes on `feat/phase-08-schedule-integrity` in small Conventional Commits and opens a PR against `main` at session end.
 
 ## Open items
 
-- A-0038 Process Gap Note Workflow remains `Not started` (carried from Phase 4 / 6). It pairs naturally with the Phase 6 listening plan; build as `W-16-process-gap-note.md` either during Phase 8 or as a short follow-up session.
-- A-0029 Local skill files refresh remains `Not started`. Pair with the Phase 8 build or a chore branch.
-- Optional Phase 7 demos that the prompt mentions but were deliberately not built: EVM variance explanation, accounting reconciliation narrative, lessons learned. Rationale lives in `SYNTHETIC_DEMO_PACK.md` "Pack index" section: those demos require synthetic finance workbooks (Phase 9 — A-0054, A-0055, A-0056) or lessons-learned templates (Phase 10 — A-0058) that are not built yet. Sequenced rather than skipped.
-- Phase 8 will need a synthetic schedule workbook (A-0053) that the Phase 7 schedule variance demo can be re-exercised against; the demo's compact schedule snapshot is sufficient for Phase 7 but a richer workbook helps Phase 8 schedule-health work.
+- A-0038 Process Gap Note Workflow remains `Not started` (carried from Phase 4).
+- A-0029 Local skill files refresh remains `Not started`.
+- A future "Synthetic schedule health review" demo could exercise the new health template against the new workbook end-to-end. Not built in Phase 8 to avoid scope creep; the workbook's "Findings the schedule reveals" section gives a starting illustration.
+- NS-C-04 (pilot retrospective) is in the workbook flagged as a discrepancy (referenced in lessons-learned draft but not on the baseline schedule). The Phase 7 discrepancy triage demo row 5 covers this; resolution belongs to the schedule owner.
 
 ## Risks and cautions
 
-- The demo pack is conservative on purpose. Every demo is labeled fictional, shows AI flagging rather than deciding, and refuses to commit deployment-readiness. Review feedback that tries to add real-data fidelity, real program/customer references, or "polish for executive use" should be redirected to the Phase 11 migration plan, not the demo pack.
-- Cross-demo references (A-105 → R-001; row 6 → schedule variance demo; etc.) keep the pack coherent but also create review burden if a future change touches one demo's cast or milestones. Use the shared scenario file as the single source of truth and back-port relevant per-demo updates in the same session if the scenario changes.
-- The Phase 7 prompt's optional EVM / accounting / lessons demos are sequenced to Phase 9 / 10 rather than built here. If a Codex reviewer expects them in Phase 7, the rationale in `SYNTHETIC_DEMO_PACK.md` "Pack index" section explains the decision.
+- Reviewers may ask for `.mpp` integration or schedule-import scripts. Decline; the Phase 8 posture is Markdown-first and tool-agnostic. Real `.mpp` work belongs in the Phase 11 employer migration plan, not in personal-preparation templates.
+- The synthetic workbook is detailed enough that a casual reader might mistake it for a real schedule. The bold synthetic label at the top is the binding disclaimer.
 
 ## AI tooling notes
 
-The Phase 7 demos are authored Gemini-first and platform-agnostic. Personal AI tools (Claude, ChatGPT, Gemini consumer) are the default tool environment for the AI-step exercises because the inputs are Synthetic per the data-routing rules in `06_GOVERNANCE/DATA_SENSITIVITY_DECISION_MODEL.md`. Migration to Employer-approved AI tools for real data requires re-walking the six-step pattern in `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`; the per-demo §14 references in the paired W-NN cards already carry that guidance forward. The pack rules forbid blending real data into demos to "make them more realistic" — that move would defeat the purpose of the pack and is one of the standing risks called out above.
+The Phase 8 templates are authored Gemini-first and platform-agnostic. Personal AI tools acceptable for the AI-step exercises because inputs are Synthetic. Migration to real schedules requires re-walking the six-step pattern in `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`; the inlined Microsoft Project data-handling note in the health template names the binding rules.
 
 ## Recommended next phase or artifact
 
-**Phase 8: Microsoft Project and Schedule Integrity Track**
+**Phase 9: EVM, Finance, and Project Accounting Track**
 
-Build schedule-health, variance-narrative, and reporting-quality artifacts using synthetic schedules. Backlog rows: A-0015 (Microsoft Project Schedule Health Checklist), A-0016 (Schedule Variance Narrative Template), A-0053 (Synthetic Schedule Workbook). Phase 8 hardens against the Phase 4 W-04 (schedule health) and W-05 (schedule variance) workflow cards, exercises the Phase 5 P-05 prompt, and pairs against the Phase 7 schedule variance demo (which uses a compact synthetic schedule snapshot). A richer synthetic schedule workbook lets the schedule-health checklist run against multi-week data with critical path identification, slack, and dependencies.
+Build EVM variance support, project accounting reconciliation, and accounting discrepancy artifacts on synthetic finance. Backlog rows: A-0054 Synthetic EVM Workbook, A-0055 Project Accounting Reconciliation Walkthrough, A-0056 Accounting Discrepancy Triage Workflow. Phase 9 hardens against W-06 (EVM variance) and W-09 (accounting reconciliation) and exercises P-06 and P-09. Synthetic finance numbers (CV, SV, CPI, SPI, EAC, ETC) only — never real contract or financial data.
 
-Optional housekeeping during or after Phase 8:
-
-- Build A-0038 Process Gap Note as `04_WORKFLOWS/W-16-process-gap-note.md`. Pairs naturally with the Phase 6 listening plan.
-- Refresh A-0029 local skill files (`skills/*/SKILL.md`) against the Phase 4 / 5 / 6 / 7 schemas.
+Optional housekeeping during or after Phase 9: build A-0038 Process Gap Note as `04_WORKFLOWS/W-16-process-gap-note.md`, and refresh A-0029 local skill files.
 
 ## Next best prompt
 
@@ -129,24 +119,21 @@ Source-of-truth files to read first:
 2. 09_HANDOFFS/SESSION_HANDOFF.md
 3. 02_ROADMAP/ROADMAP.md
 4. 03_BACKLOG/ARTIFACT_BACKLOG.md
-5. 04_WORKFLOWS/W-04-schedule-health-review.md
-6. 04_WORKFLOWS/W-05-schedule-variance-narrative.md
-7. 05_PROMPTS/P-05-schedule-variance-narrative.md
-8. 08_SYNTHETIC_DEMOS/SYNTHETIC_SCHEDULE_VARIANCE_DEMO.md
-9. 08_SYNTHETIC_DEMOS/SYNTHETIC_PROJECT_SCENARIO.md
-10. 06_GOVERNANCE/DATA_SENSITIVITY_DECISION_MODEL.md
-11. 06_GOVERNANCE/HUMAN_REVIEW_AND_AUDITABILITY_MODEL.md
-12. 05_PROMPTS/PHASE_PROMPTS/PHASE_08_MICROSOFT_PROJECT_AND_SCHEDULE_INTEGRITY_TRACK.md
+5. 04_WORKFLOWS/W-06-evm-variance-explanation.md
+6. 04_WORKFLOWS/W-09-accounting-reconciliation-narrative.md
+7. 05_PROMPTS/P-06-evm-variance-explanation.md
+8. 05_PROMPTS/P-09-accounting-reconciliation-narrative.md
+9. 06_GOVERNANCE/DATA_SENSITIVITY_DECISION_MODEL.md
+10. 06_GOVERNANCE/AI_GOVERNANCE_NOTES.md
+11. 08_SYNTHETIC_DEMOS/SYNTHETIC_PROJECT_SCENARIO.md
+12. 05_PROMPTS/PHASE_PROMPTS/PHASE_09_EVM_FINANCE_AND_PROJECT_ACCOUNTING_TRACK.md
 
 Phase to run:
-Phase 8: Microsoft Project and Schedule Integrity Track
-
-Phase prompt file:
-05_PROMPTS/PHASE_PROMPTS/PHASE_08_MICROSOFT_PROJECT_AND_SCHEDULE_INTEGRITY_TRACK.md
+Phase 9: EVM, Finance, and Project Accounting Track
 
 Safety boundary (one line):
 Use only synthetic, public, generic, fictional, or user-created non-proprietary material. Do not use classified, CUI, ITAR/export-controlled, proprietary, customer, contract, internal schedule, internal finance, internal technical, real meeting note, real Microsoft Project, or real accounting data.
 
 Posture:
-Markdown-first, Gemini-first, platform-agnostic, human-in-the-loop, approved-tool-first. Do not add apps, package dependencies, APIs, databases, deployment files, or code scaffolding. Build under a phase folder (likely `11_MICROSOFT_PROJECT/` per the existing repo structure if it exists, otherwise add the three artifacts inside `08_SYNTHETIC_DEMOS/` or a new dedicated folder consistent with `02_ROADMAP/ROADMAP.md` Phase 8 layout). Cover A-0015 (Microsoft Project Schedule Health Checklist — generic checklist, never real `.mpp`), A-0016 (Schedule Variance Narrative Template — pair with W-05 / P-05 and the Phase 7 schedule variance demo), and A-0053 (Synthetic Schedule Workbook — Markdown/CSV-style fictional schedule with critical path, slack, dependencies; references Project Northstar Demo from `SYNTHETIC_PROJECT_SCENARIO.md`). Cite the Phase 3 governance envelope by filename on each artifact. Log Phase 8 decisions in 10_DECISION_LOG/DECISION_LOG.md in the same session. Update 09_HANDOFFS/SESSION_HANDOFF.md at the end with the Phase 9 next best prompt. Optional housekeeping: build A-0038 Process Gap Note Workflow as 04_WORKFLOWS/W-16-process-gap-note.md, and refresh A-0029 local skill files.
+Markdown-first, Gemini-first, platform-agnostic, human-in-the-loop, approved-tool-first. Build A-0054 Synthetic EVM Workbook under 08_SYNTHETIC_DEMOS/, A-0055 Project Accounting Reconciliation Walkthrough under 08_SYNTHETIC_DEMOS/, A-0056 Accounting Discrepancy Triage Workflow under 04_WORKFLOWS/ (W-NN id to follow append-only rule, likely W-17 since W-16 is reserved for process gap note). Cite Phase 3 governance envelope on each artifact. Pair against W-06, W-09, P-06, P-09. Log Phase 9 decisions in 10_DECISION_LOG/DECISION_LOG.md. Update 09_HANDOFFS/SESSION_HANDOFF.md with the Phase 10 next best prompt. Optional housekeeping: A-0038 Process Gap Note Workflow; A-0029 skill files refresh.
 ```
