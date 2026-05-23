@@ -107,7 +107,7 @@ The final review of ATLAS PM/Ops OS as a complete personal-preparation operating
 
 ### Local skill files
 
-- `skills/atlas-bootstrap/SKILL.md`, `skills/atlas-handoff/SKILL.md`, `skills/atlas-safety/SKILL.md`. Last touched in Phase 1; refresh pending (A-0029 open).
+- `skills/atlas-planner/SKILL.md`, `skills/atlas-artifact-writer/SKILL.md`, `skills/atlas-session-handoff/SKILL.md`. Last touched in Phase 1; refresh pending (A-0029 open).
 
 ## Verification against the safety boundary
 
@@ -150,7 +150,7 @@ Verdict: migration readiness is at the personal-preparation level — the discip
 
 ## Verdict
 
-ATLAS PM/Ops OS is build-complete at the personal-preparation level. All 13 phases (0-12) are `Ready for personal use` or `Seeded` for the rows that have not been touched (none remain `Not started` at the phase level). Two open items remain as ongoing housekeeping (not blocking): A-0038 (Process Gap Note Workflow, W-16 reserved) and A-0029 (local skill files refresh). The Phase 7 synthetic demo pack index does not yet list the Phase 9 EVM / accounting demos — minor housekeeping, captured in the gap list.
+ATLAS PM/Ops OS is build-complete at the personal-preparation level. All 13 phases (0-12) are `Ready for personal use` or `Seeded` for the rows that have not been touched (none remain `Not started` at the phase level). Two open items remain as ongoing housekeeping (not blocking): A-0038 (Process Gap Note Workflow, W-16 reserved) and A-0029 (local skill files refresh). The Phase 7 synthetic demo pack index was reconciled in Phase 12 housekeeping to include the Phase 8 schedule workbook (A-0053) and the Phase 9 EVM / accounting substrates (A-0054, A-0055).
 
 ## Cross-references
 
