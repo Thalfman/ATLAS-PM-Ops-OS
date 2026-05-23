@@ -34,6 +34,8 @@ A first-draft SOP that captures the observed process (not an AI guess) with expl
 
 ## 6. Prohibited inputs
 
+In the default personal-preparation environment (§4), the following inputs are prohibited. Employer-deployable use against employer-approved data requires explicit approval per §14 and the six-step pattern in `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`.
+
 - Real process observations from any employer system without explicit approval.
 - Real owner names, real tool names tied to restricted systems, real customer or contract touch points.
 - SOP steps that reveal restricted technical or program content.

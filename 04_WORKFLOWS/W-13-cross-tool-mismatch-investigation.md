@@ -34,6 +34,8 @@ A short investigation record that names the mismatch precisely, identifies the c
 
 ## 6. Prohibited inputs
 
+In the default personal-preparation environment (§4), the following inputs are prohibited. Employer-deployable use against employer-approved data requires explicit approval per §14 and the six-step pattern in `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`.
+
 - Real exports from employer schedule, accounting, status, or action systems without explicit approval.
 - Real program structure, real owners, or real financial detail.
 - Cross-tool data that reveals customer or contract relationships.
@@ -118,5 +120,6 @@ Escalation triggers (stop iterating the AI draft, go to a human):
 
 - Phase 3 governance: `06_GOVERNANCE/DATA_SENSITIVITY_DECISION_MODEL.md`, `06_GOVERNANCE/HUMAN_REVIEW_AND_AUDITABILITY_MODEL.md`, `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`, `06_GOVERNANCE/AI_GOVERNANCE_NOTES.md`.
 - Backlog row: `03_BACKLOG/ARTIFACT_BACKLOG.md` A-0037.
+- Paired Phase 5 prompt: none. This workflow is investigative (mismatch identification and verification orchestration, not drafting); AI's role is to propose candidate causes, so no dedicated prompt is needed in the Phase 5 prompt library (A-0018, A-0019, A-0039..A-0047).
 - Related demo: A-0051 Synthetic Discrepancy Triage Demo (Phase 7).
 - Related workflows: W-04 (schedule health), W-05 (schedule variance), W-06 (EVM variance), W-08 (issue triage), W-09 (accounting reconciliation).

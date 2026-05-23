@@ -44,6 +44,8 @@ If two categories or environments seem to apply, take the more restrictive one (
 
 ## 6. Prohibited inputs
 
+In the default personal-preparation environment (§4), the following inputs are prohibited. Employer-deployable use against employer-approved data requires explicit approval per §14 and the six-step pattern in `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`.
+
 - [Bullet list. At minimum: classified, CUI, ITAR or export-controlled, proprietary, customer, contract, internal schedule, internal finance, internal technical, real meeting notes, real Microsoft Project files, real accounting exports - unless §4 explicitly routes to an employer-approved tool for an approved data scope.]
 
 ## 7. Output format
@@ -105,5 +107,5 @@ Escalation triggers (when to stop iterating the AI draft and go to a human):
 
 - Phase 3 governance: `06_GOVERNANCE/DATA_SENSITIVITY_DECISION_MODEL.md`, `06_GOVERNANCE/HUMAN_REVIEW_AND_AUDITABILITY_MODEL.md`, `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`, `06_GOVERNANCE/AI_GOVERNANCE_NOTES.md`.
 - Backlog row: `03_BACKLOG/ARTIFACT_BACKLOG.md` A-NNNN.
-- Paired Phase 5 prompt (if any): `05_PROMPTS/...` (TBD until Phase 5).
+- Paired Phase 5 prompt: [A-NNNN, or "none" with a one-line reason if the workflow is structural / investigative / information-management / personal-planning rather than AI-drafting].
 - Related workflows: [W-NN, W-NN].

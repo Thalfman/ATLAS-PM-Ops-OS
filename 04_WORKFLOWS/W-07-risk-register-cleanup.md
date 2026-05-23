@@ -34,6 +34,8 @@ A cleaned register with consistent condition-consequence statements, explicit tr
 
 ## 6. Prohibited inputs
 
+In the default personal-preparation environment (§4), the following inputs are prohibited. Employer-deployable use against employer-approved data requires explicit approval per §14 and the six-step pattern in `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`.
+
 - Real risk registers from any employer system without explicit approval.
 - Real owner names, contract risks, customer risks, or financial exposure detail.
 - Risks that reveal restricted technical or program content.

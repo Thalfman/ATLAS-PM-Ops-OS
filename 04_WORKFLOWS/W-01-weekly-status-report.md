@@ -35,6 +35,8 @@ A short, executive-readable status narrative with consistent sections (accomplis
 
 ## 6. Prohibited inputs
 
+In the default personal-preparation environment (§4), the following inputs are prohibited. Employer-deployable use against employer-approved data requires explicit approval per §14 and the six-step pattern in `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`.
+
 - Real employer status reports, internal schedules, or program names.
 - Real customer, contract, or financial details.
 - Internal technical content, real meeting notes, real Microsoft Project files, or real accounting exports.

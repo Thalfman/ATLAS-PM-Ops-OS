@@ -34,6 +34,8 @@ An aging summary that names every stale, blocked, ambiguous, duplicate, or depen
 
 ## 6. Prohibited inputs
 
+In the default personal-preparation environment (§4), the following inputs are prohibited. Employer-deployable use against employer-approved data requires explicit approval per §14 and the six-step pattern in `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`.
+
 - Real employer action trackers, real owner names, real internal due dates, or real internal program references unless the tracker and tool are both approved.
 - Action items that reveal restricted program structure, customer identities, contract obligations, or financial commitments.
 - Aging analysis on prohibited-data trackers - no AI use; revert to manual review.

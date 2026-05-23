@@ -35,6 +35,8 @@ A draft variance explanation that names CV, SV, CPI, and SPI accurately, walks c
 
 ## 6. Prohibited inputs
 
+In the default personal-preparation environment (§4), the following inputs are prohibited. Employer-deployable use against employer-approved data requires explicit approval per §14 and the six-step pattern in `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`.
+
 - Real EVM datasets, real cost or schedule values from employer systems.
 - Real contract value, fee structure, or customer-funded categories.
 - Real cause attribution to people, teams, vendors, or customers.

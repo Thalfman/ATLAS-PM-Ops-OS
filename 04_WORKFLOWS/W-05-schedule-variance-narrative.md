@@ -34,6 +34,8 @@ A short variance narrative grounded in the schedule delta: what variance is pres
 
 ## 6. Prohibited inputs
 
+In the default personal-preparation environment (§4), the following inputs are prohibited. Employer-deployable use against employer-approved data requires explicit approval per §14 and the six-step pattern in `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`.
+
 - Real schedule deltas from any employer system without explicit approval.
 - Real activity names, IDs, baselines, or owner attribution.
 - Restricted causal explanations (customer behavior, contract changes, real technical issues).

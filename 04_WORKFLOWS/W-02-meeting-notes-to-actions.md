@@ -34,6 +34,8 @@ A short, deduplicated action table extracted from a single meeting's notes, with
 
 ## 6. Prohibited inputs
 
+In the default personal-preparation environment (§4), the following inputs are prohibited. Employer-deployable use against employer-approved data requires explicit approval per §14 and the six-step pattern in `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`.
+
 - Real internal meeting notes from employer business unless the meeting itself and the tool are both approved for the content.
 - Notes that reference real program names, contract details, customer details, financials, or internal technical content without explicit approval.
 - Notes that paraphrase restricted briefings (paraphrased restricted content is restricted content).

@@ -34,6 +34,8 @@ A short, leadership-ready brief with a clear headline (status color or trend), t
 
 ## 6. Prohibited inputs
 
+In the default personal-preparation environment (§4), the following inputs are prohibited. Employer-deployable use against employer-approved data requires explicit approval per §14 and the six-step pattern in `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`.
+
 - Real program state from any employer system without explicit approval.
 - Real customer-facing detail, real contract value, real financial outlook.
 - Restricted technical or compliance detail.

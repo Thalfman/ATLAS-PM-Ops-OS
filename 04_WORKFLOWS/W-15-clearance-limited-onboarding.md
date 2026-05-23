@@ -35,6 +35,8 @@ A small set of personal-preparation activities Tom can run during clearance-limi
 
 ## 6. Prohibited inputs
 
+In the default personal-preparation environment (§4), the following inputs are prohibited. Employer-deployable use against employer-approved data requires explicit approval per §14 and the six-step pattern in `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`.
+
 - Any restricted content overheard or observed in clearance-limited spaces.
 - Paraphrased content from a restricted briefing Tom was permitted to observe.
 - Real program names, customer names, contract IDs.
@@ -114,5 +116,6 @@ Escalation triggers (stop iterating the AI draft, go to a human):
 
 - Phase 3 governance: `06_GOVERNANCE/DATA_SENSITIVITY_DECISION_MODEL.md`, `06_GOVERNANCE/HUMAN_REVIEW_AND_AUDITABILITY_MODEL.md`, `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`, `06_GOVERNANCE/AI_GOVERNANCE_NOTES.md`.
 - Backlog row: `03_BACKLOG/ARTIFACT_BACKLOG.md` A-0068.
+- Paired Phase 5 prompt: none. This workflow is personal-planning (weekly commitment shape, daily pattern, listening log structure, not drafting); AI's role is optional structuring, so no dedicated prompt is needed in the Phase 5 prompt library (A-0018, A-0019, A-0039..A-0047).
 - Related Phase 6 artifacts: A-0022 Clearance-Limited Value Plan, A-0048 Listening Plan, A-0050 "What I Can Offer This Week" One-Pager, A-0049 Onboarding Question Set, A-0005 First-Week Discovery Script, A-0006 Executive Narrative Template.
 - Related workflows: W-01 (weekly status report), W-12 (executive brief generation), and the future W-16 (process gap note, A-0038) when that is built.

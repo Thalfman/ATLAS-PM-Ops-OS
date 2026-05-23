@@ -34,6 +34,8 @@ A short triage record for each issue or discrepancy with: a one-line description
 
 ## 6. Prohibited inputs
 
+In the default personal-preparation environment (§4), the following inputs are prohibited. Employer-deployable use against employer-approved data requires explicit approval per §14 and the six-step pattern in `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`.
+
 - Real customer complaints, real audit findings, real contract disputes.
 - Real personnel or performance issues.
 - Issues that reveal restricted program structure, real systems, or financial impact.

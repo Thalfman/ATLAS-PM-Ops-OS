@@ -34,6 +34,8 @@ A short reconciliation narrative that walks the discrepancy in a consistent stru
 
 ## 6. Prohibited inputs
 
+In the default personal-preparation environment (§4), the following inputs are prohibited. Employer-deployable use against employer-approved data requires explicit approval per §14 and the six-step pattern in `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`.
+
 - Real accounting exports, real labor data, real cost categories from any employer system without explicit approval.
 - Real contract value, fee, or rate detail.
 - Real customer billing or invoicing detail.

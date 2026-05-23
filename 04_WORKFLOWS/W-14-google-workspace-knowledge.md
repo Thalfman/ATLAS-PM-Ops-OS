@@ -35,6 +35,8 @@ A repeatable pattern for placing, naming, owning, tagging, and sharing knowledge
 
 ## 6. Prohibited inputs
 
+In the default personal-preparation environment (§4), the following inputs are prohibited. Employer-deployable use against employer-approved data requires explicit approval per §14 and the six-step pattern in `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`.
+
 - Restricted content uploaded to a personal Drive or unapproved Workspace.
 - Content shared externally without verified link ownership.
 - Sheets used as source of truth without clear ownership and review cadence.
@@ -128,5 +130,6 @@ Escalation triggers (stop iterating the AI draft, go to a human):
 
 - Phase 3 governance: `06_GOVERNANCE/DATA_SENSITIVITY_DECISION_MODEL.md`, `06_GOVERNANCE/HUMAN_REVIEW_AND_AUDITABILITY_MODEL.md`, `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`, `06_GOVERNANCE/AI_GOVERNANCE_NOTES.md`.
 - Backlog row: `03_BACKLOG/ARTIFACT_BACKLOG.md` A-0020.
+- Paired Phase 5 prompt: none. This workflow is information-management (placement, naming, sharing-scope pattern, not drafting); AI's role is structural, so no dedicated prompt is needed in the Phase 5 prompt library (A-0018, A-0019, A-0039..A-0047).
 - Related artifact: A-0059 Knowledge Base Pattern (Phase 10).
 - Related workflows: W-11 (SOP draft generation) for the SOP describing this pattern.

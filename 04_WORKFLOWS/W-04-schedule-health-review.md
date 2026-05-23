@@ -34,6 +34,8 @@ A short observation list that names the structural schedule hygiene issues in a 
 
 ## 6. Prohibited inputs
 
+In the default personal-preparation environment (§4), the following inputs are prohibited. Employer-deployable use against employer-approved data requires explicit approval per §14 and the six-step pattern in `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`.
+
 - Real `.mpp` files from any employer system.
 - Real activity IDs, real WBS names, or real program identifiers.
 - Real customer, contract, or financial linkages inside the schedule.
@@ -118,5 +120,6 @@ Escalation triggers (stop iterating the AI draft, go to a human):
 
 - Phase 3 governance: `06_GOVERNANCE/DATA_SENSITIVITY_DECISION_MODEL.md`, `06_GOVERNANCE/HUMAN_REVIEW_AND_AUDITABILITY_MODEL.md`, `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`, `06_GOVERNANCE/AI_GOVERNANCE_NOTES.md`.
 - Backlog row: `03_BACKLOG/ARTIFACT_BACKLOG.md` A-0015 (Phase 8 deliverable; this card is the Phase 4 workflow that pairs with it).
+- Paired Phase 5 prompt: none. This workflow is structural (hygiene observation, not drafting); AI's role is to flag and question, so no dedicated prompt is needed in the Phase 5 prompt library (A-0018, A-0019, A-0039..A-0047).
 - Related artifacts: A-0053 Synthetic Schedule Workbook (Phase 8).
 - Related workflows: W-05 (schedule variance narrative), W-09 (accounting reconciliation), W-13 (cross-tool mismatch investigation).

@@ -34,6 +34,8 @@ A short lessons-learned entry for a specific event, capturing what happened, wha
 
 ## 6. Prohibited inputs
 
+In the default personal-preparation environment (§4), the following inputs are prohibited. Employer-deployable use against employer-approved data requires explicit approval per §14 and the six-step pattern in `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`.
+
 - Real event notes that name real individuals, teams, or vendors in identifiable ways.
 - Real customer-impact descriptions, real contract or financial impact detail.
 - Restricted program structure or technical content tied to the event.
