@@ -25,16 +25,19 @@ The Synthetic Demo Pack is the set of fictional, end-to-end demonstrations that 
 
 ## Pack index
 
-| File | Backlog A-ID | Paired W-NN | Paired P-NN | Per-domain review pattern |
-|---|---|---|---|---|
-| `SYNTHETIC_PROJECT_SCENARIO.md` | (utility, D-0048) | — | — | — |
-| `SYNTHETIC_STATUS_PACK_DEMO.md` | A-0007 | W-01, W-12 | P-01, P-12 | Status and reporting outputs |
-| `SYNTHETIC_SCHEDULE_VARIANCE_DEMO.md` | A-0023 | W-05 | P-05 | Schedule outputs |
-| `SYNTHETIC_ACTION_TRACKER_DEMO.md` | A-0024 | W-02, W-03 | P-02, P-03 | Meeting notes to action items |
-| `SYNTHETIC_DISCREPANCY_TRIAGE_DEMO.md` | A-0051 | W-08 | P-08 | Risk and issue triage outputs |
-| `SYNTHETIC_RISK_REGISTER_CLEANUP_DEMO.md` | A-0052 | W-07 | P-07 | Risk and issue triage outputs |
+| File | Backlog A-ID | Phase | Paired W-NN | Paired P-NN | Per-domain review pattern |
+|---|---|---|---|---|---|
+| `SYNTHETIC_PROJECT_SCENARIO.md` | (utility, D-0048) | 7 | — | — | — |
+| `SYNTHETIC_STATUS_PACK_DEMO.md` | A-0007 | 7 | W-01, W-12 | P-01, P-12 | Status and reporting outputs |
+| `SYNTHETIC_SCHEDULE_VARIANCE_DEMO.md` | A-0023 | 7 | W-05 | P-05 | Schedule outputs |
+| `SYNTHETIC_ACTION_TRACKER_DEMO.md` | A-0024 | 7 | W-02, W-03 | P-02, P-03 | Meeting notes to action items |
+| `SYNTHETIC_DISCREPANCY_TRIAGE_DEMO.md` | A-0051 | 7 | W-08 | P-08 | Risk and issue triage outputs |
+| `SYNTHETIC_RISK_REGISTER_CLEANUP_DEMO.md` | A-0052 | 7 | W-07 | P-07 | Risk and issue triage outputs |
+| `SYNTHETIC_SCHEDULE_WORKBOOK.md` | A-0053 | 8 | W-04, W-05 | P-05 | Schedule outputs |
+| `SYNTHETIC_EVM_WORKBOOK.md` | A-0054 | 9 | W-06 | P-06 | Finance, EVM, and project accounting outputs |
+| `SYNTHETIC_ACCOUNTING_RECONCILIATION_DEMO.md` | A-0055 | 9 | W-09 | P-09 | Finance, EVM, and project accounting outputs |
 
-The Phase 7 prompt mentions several optional demo categories (EVM variance explanation, accounting reconciliation narrative, lessons learned, executive brief) that are not built in this pack. Rationale: A-0007 already covers the executive brief side through P-12; EVM and accounting reconciliation demos require synthetic finance workbooks that belong to Phase 9 (A-0054, A-0055, A-0056); the lessons-learned demo belongs to Phase 10 (A-0013, A-0058). Building those demos in Phase 7 would either duplicate Phase 9 / Phase 10 work or invent finance data without the supporting workbook. The pack's five demos cover the AI-drafting patterns that can stand on their own at Phase 7's level of fidelity; the rest is sequenced.
+The Phase 7 prompt mentions several optional demo categories (EVM variance explanation, accounting reconciliation narrative, lessons learned, executive brief) that were intentionally not built in the original Phase 7 pack. Rationale: A-0007 already covers the executive brief side through P-12; EVM and accounting reconciliation require synthetic finance workbooks that belong to Phase 9 (A-0054, A-0055, A-0056); the lessons-learned demo belongs to Phase 10 (A-0013, A-0058). The Phase 8 schedule workbook (A-0053) and Phase 9 finance substrates (A-0054, A-0055) were subsequently built in their own phases and are indexed here per Phase 12 housekeeping so this pack remains the single inventory of files under `08_SYNTHETIC_DEMOS/`. They obey the same pack rules but sit alongside (not inside) the original Phase 7 five-demo set.
 
 ## Using a demo with a manager or peer
 
@@ -52,7 +55,7 @@ Never blend in real data on the fly.
 
 - Demo file IDs follow the existing backlog A-IDs; append-only per D-0017.
 - The shared scenario file is the source of truth for cast, milestones, workstreams. Schema changes apply to the scenario file first, then back-port relevant demos in the same session.
-- Future demo additions for Phase 8+ (real schedule fidelity, EVM workbook fidelity, lessons-learned fidelity) follow the same per-demo file pattern and pair against the existing W-NN / P-NN catalog.
+- Future demo additions for Phase 8+ (real schedule fidelity, EVM workbook fidelity, lessons-learned fidelity) follow the same per-demo file pattern and pair against the existing W-NN / P-NN catalog. New additions to `08_SYNTHETIC_DEMOS/` get a row in the pack index in the same session they are built.
 - Edits that would weaken the pack rules (paragraph 1-7 above) require a new logged decision before they can be accepted.
 
 ## Cross-references

@@ -26,16 +26,14 @@ These rows remain `Not started` at the end of Phase 12. They are housekeeping, n
 | Row | Title | Notes |
 |---|---|---|
 | A-0038 | Process Gap Note Workflow | W-16 reserved. Pairs naturally with `LISTENING_PLAN.md`. Build as `04_WORKFLOWS/W-16-process-gap-note.md` in a follow-up chore session. |
-| A-0029 | Local skill files refresh | Phase 4 / 5 / 6 / 7 / 8 / 9 / 10 patterns are now stable. The three `skills/*/SKILL.md` files (`atlas-bootstrap`, `atlas-handoff`, `atlas-safety`) can be re-checked against current schemas in a chore session. |
+| A-0029 | Local skill files refresh | Phase 4 / 5 / 6 / 7 / 8 / 9 / 10 patterns are now stable. The three `skills/*/SKILL.md` files (`atlas-planner`, `atlas-artifact-writer`, `atlas-session-handoff`) can be re-checked against current schemas in a chore session. |
 
 ## Indexing and reconciliation gaps
 
 | Gap | Where | Suggested action |
 |---|---|---|
-| Phase 9 EVM / accounting demos are not listed in the Phase 7 demo pack index. | `08_SYNTHETIC_DEMOS/SYNTHETIC_DEMO_PACK.md` "Pack index" table. | Add `SYNTHETIC_EVM_WORKBOOK.md` and `SYNTHETIC_ACCOUNTING_RECONCILIATION_DEMO.md` rows. |
 | The Phase 7 demo pack rules list "no real-data blending" but the synthetic EVM / accounting demos are richer than the original pack rules anticipated. | `SYNTHETIC_DEMO_PACK.md` rules vs new content. | Confirm the existing rules still apply unchanged (they do). No action required unless review surfaces a tension. |
 | `SCHEDULE_HEALTH_REVIEW_TEMPLATE.md` references a "Synthetic schedule health review" demo that was not built in Phase 8. | `07_TEMPLATES/SCHEDULE_HEALTH_REVIEW_TEMPLATE.md` cross-references. | Optional Phase 12+ housekeeping: build a worked example demo against `SYNTHETIC_SCHEDULE_WORKBOOK.md`. |
-| The Phase 9 W-17 card mentions A-0037 cross-tool mismatch as a related workflow, but A-0037 is a Phase 4 backlog row, not a workflow card. | `04_WORKFLOWS/W-17-accounting-discrepancy-triage.md` §15. | Minor: clarify the reference is to W-13 (the cross-tool mismatch workflow card) and A-0037 (the backlog row). |
 
 ## Coverage gaps
 
