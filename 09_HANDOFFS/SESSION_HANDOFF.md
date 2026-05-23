@@ -6,11 +6,11 @@
 
 ## Current phase
 
-**Phase 8 - Microsoft Project and Schedule Integrity Track (complete)**
+**Phase 9 - EVM, Finance, and Project Accounting Track (complete)**
 
 ## Session objective
 
-Build the Phase 8 schedule integrity track: a generic schedule health review template (A-0015), a schedule variance narrative template (A-0016) pairing W-05 / P-05 and the Phase 7 variance demo, and a 24-task synthetic schedule workbook (A-0053) on Project Northstar Demo with critical path, slack, and constraints. Include a safe Microsoft Project data-handling note inlined in the health template. No new W-NN or P-NN added — Phase 8's value is in the substrate that existing W-04 / W-05 / P-05 cards point at. Phase 9 (EVM, Finance, and Project Accounting Track) is next.
+Build the Phase 9 EVM, finance, and project accounting track: synthetic EVM workbook (A-0054), four-view reconciliation walkthrough demo (A-0055), and a new W-17 accounting discrepancy triage workflow (A-0056). No standalone EVM / accounting templates were built; the demos and existing W-06 / W-09 §7 output formats serve the template role (D-0054). Phase 10 (SOP and Lessons Learned Track) is next.
 
 ## Source-of-truth review
 
@@ -19,41 +19,42 @@ Confirm:
 - [x] Read `00_MASTER_CONTEXT/MASTER_CONTEXT.md` at session start.
 - [x] Read the previous `09_HANDOFFS/SESSION_HANDOFF.md` at session start.
 - [x] Working directory confirmed as `C:\Users\thalf\OneDrive\Documents\ATLAS-PM-Ops-OS`.
-- [x] Phase prompt `05_PROMPTS/PHASE_PROMPTS/PHASE_08_MICROSOFT_PROJECT_AND_SCHEDULE_INTEGRITY_TRACK.md` consulted.
-- [x] Phase 4 W-04 (schedule health) and W-05 (schedule variance) cards confirmed for pairing.
-- [x] Phase 5 P-05 (schedule variance prompt) confirmed for pairing.
-- [x] Phase 7 schedule variance demo (`SYNTHETIC_SCHEDULE_VARIANCE_DEMO.md`) and shared scenario (`SYNTHETIC_PROJECT_SCENARIO.md`) confirmed as the backdrop the workbook extends.
+- [x] Phase prompt `05_PROMPTS/PHASE_PROMPTS/PHASE_09_EVM_FINANCE_AND_PROJECT_ACCOUNTING_TRACK.md` consulted.
+- [x] Phase 4 W-06 (EVM variance) and W-09 (accounting reconciliation) cards re-read.
+- [x] Phase 5 P-06 and P-09 prompt cards confirmed for pairing.
+- [x] Phase 8 synthetic schedule workbook confirmed as cross-walk substrate for EVM variance driver analysis.
 
 ## Files changed
 
 | Path | Type of change | Summary |
 |---|---|---|
-| `07_TEMPLATES/SCHEDULE_HEALTH_REVIEW_TEMPLATE.md` | added | A-0015 schedule health review template: A..L checklist (baseline, milestones, logic, constraints, lags, critical path, slack, owners, status date, late starts/finishes, forecast vs baseline, review limitations); inlined Microsoft Project data-handling note (D-0051); output shape; failure modes; migration notes. Pairs with W-04 and A-0053 workbook. |
-| `07_TEMPLATES/SCHEDULE_VARIANCE_NARRATIVE_TEMPLATE.md` | added | A-0016 schedule variance narrative template: 6-section narrative shape plus a mandatory number-trace appendix; quality checklist; failure modes; migration notes. Pairs with W-05 / P-05 / A-0047 prompt and the Phase 7 variance demo. |
-| `08_SYNTHETIC_DEMOS/SYNTHETIC_SCHEDULE_WORKBOOK.md` | added | A-0053 synthetic schedule workbook: 24 tasks across Workstreams A/B/C plus Mgmt on Project Northstar Demo, with baseline vs current dates, % complete, slack, critical path, two constraints (SNET 2026-06-01 on NS-A-04 and MFO 2026-06-12 on NS-M-06). Cross-references the Phase 7 demos and provides the substrate for the new Phase 8 templates. |
-| `03_BACKLOG/ARTIFACT_BACKLOG.md` | updated | Three Microsoft Project and schedule integrity rows (A-0015, A-0016, A-0053) flipped from `Not started` to `Ready for personal use` with Notes columns pointing at the new file paths and the paired W-NN / P-NN. "Current build recommendation" tail rewritten to mark Phase 8 complete and name Phase 9 as next. |
-| `10_DECISION_LOG/DECISION_LOG.md` | updated | Appended D-0049..D-0051 covering Phase 8 branch (canonical convention), the templates-plus-workbook sequencing without new W-NN / P-NN, and the inlined Microsoft Project data-handling note. |
-| `00_MASTER_CONTEXT/MASTER_CONTEXT.md` | updated | Bumped current build stage to "Phase 8 - Microsoft Project and Schedule Integrity Track (complete)" and rewrote the Immediate objective paragraph to describe the three Phase 8 files and name Phase 9 (EVM, Finance, and Project Accounting Track) as next. |
+| `08_SYNTHETIC_DEMOS/SYNTHETIC_EVM_WORKBOOK.md` | added | A-0054: synthetic EVM dataset for Project Northstar Demo. Three control accounts (CA-A Reporting, CA-B Action tracking, CA-C Risk and decision capture) with BAC totals 400 / 300 / 200 (900 total). Week-3 cutoff snapshot: BCWS 450, BCWP 400, ACWP 435; CV -35, SV -50; CPI 0.92, SPI 0.89. Illustrative EAC formulas; driver category proposals as observations. Cross-walks to Phase 8 schedule workbook. |
+| `08_SYNTHETIC_DEMOS/SYNTHETIC_ACCOUNTING_RECONCILIATION_DEMO.md` | added | A-0055: four-view reconciliation walkthrough. EVM ACWP 435, ledger 460, time-tracking 410, status pack narrative "~430" — spread 50 units. AI structures candidate drivers (cutoff misalignment, posting lag, scope mismatch, rounding) as observations and proposes investigation questions for the accounting reviewer. |
+| `04_WORKFLOWS/W-17-accounting-discrepancy-triage.md` | added | A-0056: 16-section workflow card conforming to D-0029 schema. Accounting-specific sibling to W-08 (generic issue triage) and W-09 (reconciliation narrative). Triage record feeds the next W-09 reconciliation. New W-NN; W-16 stays reserved for A-0038 Process Gap Note per D-0053. |
+| `04_WORKFLOWS/WORKFLOW_LIBRARY.md` | updated | Added W-17 row to the workflow index (gap at W-16 deliberate; reserved for A-0038). |
+| `03_BACKLOG/ARTIFACT_BACKLOG.md` | updated | Three rows (A-0054, A-0055, A-0056) flipped from `Not started` to `Ready for personal use` with Notes columns pointing at the new file paths. "Current build recommendation" tail rewritten to mark Phase 9 complete and name Phase 10 as next. |
+| `10_DECISION_LOG/DECISION_LOG.md` | updated | Appended D-0052..D-0054 covering Phase 9 branch (canonical convention), the new W-17 with W-16 reserved gap, and the no-new-template sequencing. |
+| `00_MASTER_CONTEXT/MASTER_CONTEXT.md` | updated | Bumped current build stage to "Phase 9 - EVM, Finance, and Project Accounting Track (complete)" and rewrote the Immediate objective paragraph. |
 
 ## Completed work
 
-- Authored `07_TEMPLATES/SCHEDULE_HEALTH_REVIEW_TEMPLATE.md` (A-0015): A..L checklist covers baseline awareness, milestone integrity, logic and dependencies, constraints, lags and leads, critical path, float and slack, resource and owner clarity, status date and data date, late starts / finishes, forecast vs baseline variance, and review limitations. Inlined Microsoft Project data-handling note enforces no `.mpp` files or paraphrased real schedules in personal AI tools.
-- Authored `07_TEMPLATES/SCHEDULE_VARIANCE_NARRATIVE_TEMPLATE.md` (A-0016): six-section narrative shape (summary, what moved, apparent cause as observation, recovery posture, decisions needed, open questions) with a mandatory number-trace appendix at Standard intensity and Strict intensity.
-- Authored `08_SYNTHETIC_DEMOS/SYNTHETIC_SCHEDULE_WORKBOOK.md` (A-0053): 24-task synthetic schedule on Project Northstar Demo with baseline vs current dates, slack, critical path identification, two constraints, and findings illustrating the health template. Cross-references the Phase 7 demos (variance, discrepancy triage, risk register cleanup).
+- Authored `08_SYNTHETIC_DEMOS/SYNTHETIC_EVM_WORKBOOK.md` (A-0054) with three fictional control accounts, week-3 EVM snapshot, illustrative EAC formulas, driver-category proposals, and EVM cutoff / data-date awareness section.
+- Authored `08_SYNTHETIC_DEMOS/SYNTHETIC_ACCOUNTING_RECONCILIATION_DEMO.md` (A-0055) walking the four-view reconciliation end-to-end with P-09; AI proposes drivers and investigation questions without asserting a financial cause.
+- Authored `04_WORKFLOWS/W-17-accounting-discrepancy-triage.md` (A-0056) as a 16-section workflow card; updated `WORKFLOW_LIBRARY.md` index to include W-17 (with W-16 reserved for A-0038).
 - Reconciled `03_BACKLOG/ARTIFACT_BACKLOG.md`: three status flips, three Notes updates, "Current build recommendation" rewritten.
-- Logged three Phase 8 decisions in `10_DECISION_LOG/DECISION_LOG.md` (D-0049 through D-0051) in the same session.
-- Updated `00_MASTER_CONTEXT/MASTER_CONTEXT.md` to mark Phase 8 complete and name Phase 9 as the next objective.
-- Worked Phase 8 on branch `feat/phase-08-schedule-integrity` per the canonical convention (D-0049).
+- Logged three Phase 9 decisions (D-0052..D-0054) in `10_DECISION_LOG/DECISION_LOG.md` in the same session.
+- Updated `00_MASTER_CONTEXT/MASTER_CONTEXT.md` to mark Phase 9 complete and name Phase 10 as next.
+- Worked Phase 9 on branch `feat/phase-09-evm-finance-accounting` per the canonical convention (D-0052).
 
 ## Decisions made
 
 | Decision | Rationale | File or area impacted |
 |---|---|---|
-| Phase 8 on canonical `feat/phase-08-schedule-integrity` branch. | Continues the canonical-convention return from D-0045; no env-constrained branch was pre-allocated. | Git. |
-| Phase 8 deliverables sequenced as templates plus a synthetic workbook; no new W-NN or P-NN added. | Phase 4 / 5 cards already cover the workflow and prompt sides; Phase 8 adds the fillable substrate. | `07_TEMPLATES/` and `08_SYNTHETIC_DEMOS/`. |
-| Microsoft Project data-handling note inlined in the schedule health template rather than promoted to its own governance file. | Short, tightly coupled to the template's use; existing `06_GOVERNANCE/` files already cover the broader policy. | `07_TEMPLATES/SCHEDULE_HEALTH_REVIEW_TEMPLATE.md`. |
+| Phase 9 on canonical `feat/phase-09-evm-finance-accounting` branch. | Continues canonical-convention return from D-0045 / D-0049. | Git. |
+| Phase 9 adds W-17 (Accounting Discrepancy Triage) as a new workflow card; W-16 stays reserved for A-0038 Process Gap Note. | A-0056 names a workflow with no existing W-NN equivalent. Append-only ID rule (D-0030) keeps W-16 reserved until A-0038 is built. | `04_WORKFLOWS/W-17-accounting-discrepancy-triage.md`, `WORKFLOW_LIBRARY.md`. |
+| Phase 9 builds backlog-row files only; standalone EVM / accounting templates not built. The synthetic demos and the existing W-06 / W-09 §7 output formats serve the template role. | Phase 4 / 5 cards already publish output formats; standalone templates would duplicate. Demos exercise the formats end-to-end on the shared scenario. | `07_TEMPLATES/` (no new files for Phase 9). |
 
-These decisions are logged in this session as `D-0049` through `D-0051` in `10_DECISION_LOG/DECISION_LOG.md`.
+These decisions are logged in this session as `D-0052` through `D-0054` in `10_DECISION_LOG/DECISION_LOG.md`.
 
 ## Safety review
 
@@ -65,10 +66,12 @@ Confirm:
 - [x] No ITAR or export-controlled data used.
 - [x] No proprietary, customer, contract, internal schedule, internal finance, or internal technical data used.
 - [x] No real program names, real meeting notes, real Microsoft Project files, or real project accounting exports used.
-- [x] All examples are obviously synthetic: Project Northstar Demo, fictional cast (PM/Ops, Team Lead, Workstream A/B/C Leads, Reporting Coordinator), fictional activity IDs (NS-A-01..08, NS-B-01..05, NS-C-01..05, NS-M-01..06). The workbook's bold synthetic label disclaims any resemblance to real programs.
-- [x] Microsoft Project data-handling note explicitly forbids real `.mpp` files, real exports, paraphrased real schedules, and metadata leakage in any personal AI tool.
-- [x] Human-in-the-loop posture preserved: every template names a named human reviewer and forbids AI from changing dates, dependencies, or baselines.
-- [x] Gemini-first and platform-agnostic posture preserved: templates use generic "AI assistant" framing; the workbook is tool-agnostic Markdown with no `.mpp` artifact.
+- [x] All examples are obviously synthetic: Project Northstar Demo control accounts CA-A/B/C; round illustrative units (no currency); fictional cutoff dates and ledger discrepancy magnitudes. Bold synthetic label at the top of each demo.
+- [x] EVM workbook explicitly forbids real EVM data in personal AI tools and routes real EVM through Employer-approved AI tools per the six-step approval pattern.
+- [x] Accounting reconciliation demo explicitly forbids AI from asserting a financial cause, picking the "right" view, or committing a corrected total.
+- [x] W-17 workflow card §6 prohibits real ledger entries, real labor extracts, real customer billing, real contract clauses, real cost-account codes, real WBS codes.
+- [x] Human-in-the-loop posture preserved: accounting reviewer / finance analyst named as accountable approver for real discrepancies; Tom for synthetic practice.
+- [x] Gemini-first and platform-agnostic posture preserved.
 - [x] No app, package, API, database, deployment, or code scaffolding added.
 
 ## Definition-of-done check
@@ -77,34 +80,34 @@ Confirm:
 
 - [x] Every artifact created is Markdown-first and portable.
 - [x] Every artifact has a clear purpose and a named human review step.
-- [x] No artifact assumes access or data Tom may not have during clearance-limited onboarding. All inputs are obviously synthetic.
+- [x] No artifact assumes access or data Tom may not have. All inputs are obviously synthetic.
 - [x] This handoff file is up to date and contains the next best prompt.
-- [x] Significant decisions logged in `10_DECISION_LOG/DECISION_LOG.md` in the same session (D-0049..D-0051); none deferred.
-- [x] Local-agent mode committed Phase 8 changes on `feat/phase-08-schedule-integrity` in small Conventional Commits and opens a PR against `main` at session end.
+- [x] Significant decisions logged in `10_DECISION_LOG/DECISION_LOG.md` in the same session (D-0052..D-0054); none deferred.
+- [x] Local-agent mode committed Phase 9 changes on `feat/phase-09-evm-finance-accounting` and opens a PR against `main` at session end.
 
 ## Open items
 
-- A-0038 Process Gap Note Workflow remains `Not started` (carried from Phase 4).
+- A-0038 Process Gap Note Workflow remains `Not started` (W-16 reserved). Optional housekeeping for Phase 10 or earlier.
 - A-0029 Local skill files refresh remains `Not started`.
-- A future "Synthetic schedule health review" demo could exercise the new health template against the new workbook end-to-end. Not built in Phase 8 to avoid scope creep; the workbook's "Findings the schedule reveals" section gives a starting illustration.
-- NS-C-04 (pilot retrospective) is in the workbook flagged as a discrepancy (referenced in lessons-learned draft but not on the baseline schedule). The Phase 7 discrepancy triage demo row 5 covers this; resolution belongs to the schedule owner.
+- The Phase 7 demo pack does not yet have an EVM / accounting demo on its own (the Phase 9 demo files live under the same `08_SYNTHETIC_DEMOS/` directory but are not currently listed in `SYNTHETIC_DEMO_PACK.md`'s pack index table). Update the pack index in a follow-up session or as part of Phase 10 housekeeping.
 
 ## Risks and cautions
 
-- Reviewers may ask for `.mpp` integration or schedule-import scripts. Decline; the Phase 8 posture is Markdown-first and tool-agnostic. Real `.mpp` work belongs in the Phase 11 employer migration plan, not in personal-preparation templates.
-- The synthetic workbook is detailed enough that a casual reader might mistake it for a real schedule. The bold synthetic label at the top is the binding disclaimer.
+- The EVM workbook uses illustrative round numbers without currency. If a reviewer wants currency-attached examples to feel "more realistic," decline — currency commitments are a Phase 11 employer-migration concern.
+- The four-view reconciliation demo proposes driver candidates as observations. If a reviewer asks AI to "pick the right view," surface as a posture issue.
+- W-17 is the first new W-NN added since Phase 4. Future phases that add W-NN cards (e.g., Phase 10 if a knowledge-base workflow surfaces) follow the same 16-section schema (D-0029, D-0034) and update `WORKFLOW_LIBRARY.md`.
 
 ## AI tooling notes
 
-The Phase 8 templates are authored Gemini-first and platform-agnostic. Personal AI tools acceptable for the AI-step exercises because inputs are Synthetic. Migration to real schedules requires re-walking the six-step pattern in `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`; the inlined Microsoft Project data-handling note in the health template names the binding rules.
+The Phase 9 artifacts are authored Gemini-first and platform-agnostic. Personal AI tools acceptable for the AI-step exercises because inputs are Synthetic. Real EVM, ledger, time-tracking, contract, or burden data routes only through Employer-approved AI tools after re-walking the six-step pattern in `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`. The W-17 workflow card §13 names the escalation triggers (discrepancy magnitude exceeds tolerance, suspected system error, suspected policy violation) that always go to a human, never AI.
 
 ## Recommended next phase or artifact
 
-**Phase 9: EVM, Finance, and Project Accounting Track**
+**Phase 10: SOP and Lessons Learned Track**
 
-Build EVM variance support, project accounting reconciliation, and accounting discrepancy artifacts on synthetic finance. Backlog rows: A-0054 Synthetic EVM Workbook, A-0055 Project Accounting Reconciliation Walkthrough, A-0056 Accounting Discrepancy Triage Workflow. Phase 9 hardens against W-06 (EVM variance) and W-09 (accounting reconciliation) and exercises P-06 and P-09. Synthetic finance numbers (CV, SV, CPI, SPI, EAC, ETC) only — never real contract or financial data.
+Make repeatable PM/Ops knowledge a first-class output: SOP drafts and lessons-learned capture. Backlog rows: A-0013 (Lessons Learned Capture Workflow), A-0014 (SOP Draft Generation Workflow), A-0057 (SOP Template), A-0058 (Lessons Learned Template), A-0059 (Knowledge Base Pattern). Phase 10 hardens against the Phase 4 W-10 / W-11 cards and exercises P-10 / P-11. Most of Phase 10's value is in the templates and an optional knowledge-base pattern; the workflow cards already exist.
 
-Optional housekeeping during or after Phase 9: build A-0038 Process Gap Note as `04_WORKFLOWS/W-16-process-gap-note.md`, and refresh A-0029 local skill files.
+Optional housekeeping during or after Phase 10: build A-0038 Process Gap Note as `04_WORKFLOWS/W-16-process-gap-note.md`, refresh A-0029 local skill files, and update `08_SYNTHETIC_DEMOS/SYNTHETIC_DEMO_PACK.md` pack index to include the Phase 9 EVM and accounting reconciliation demos.
 
 ## Next best prompt
 
@@ -117,23 +120,27 @@ C:\Users\thalf\OneDrive\Documents\ATLAS-PM-Ops-OS
 Source-of-truth files to read first:
 1. 00_MASTER_CONTEXT/MASTER_CONTEXT.md
 2. 09_HANDOFFS/SESSION_HANDOFF.md
-3. 02_ROADMAP/ROADMAP.md
-4. 03_BACKLOG/ARTIFACT_BACKLOG.md
-5. 04_WORKFLOWS/W-06-evm-variance-explanation.md
-6. 04_WORKFLOWS/W-09-accounting-reconciliation-narrative.md
-7. 05_PROMPTS/P-06-evm-variance-explanation.md
-8. 05_PROMPTS/P-09-accounting-reconciliation-narrative.md
-9. 06_GOVERNANCE/DATA_SENSITIVITY_DECISION_MODEL.md
-10. 06_GOVERNANCE/AI_GOVERNANCE_NOTES.md
-11. 08_SYNTHETIC_DEMOS/SYNTHETIC_PROJECT_SCENARIO.md
-12. 05_PROMPTS/PHASE_PROMPTS/PHASE_09_EVM_FINANCE_AND_PROJECT_ACCOUNTING_TRACK.md
+3. 03_BACKLOG/ARTIFACT_BACKLOG.md
+4. 04_WORKFLOWS/W-10-lessons-learned-capture.md
+5. 04_WORKFLOWS/W-11-sop-draft-generation.md
+6. 05_PROMPTS/P-10-lessons-learned-capture.md
+7. 05_PROMPTS/P-11-sop-first-draft.md
+8. 06_GOVERNANCE/AI_GOVERNANCE_NOTES.md
+9. 05_PROMPTS/PHASE_PROMPTS/PHASE_10_SOP_AND_LESSONS_LEARNED_TRACK.md
 
 Phase to run:
-Phase 9: EVM, Finance, and Project Accounting Track
+Phase 10: SOP and Lessons Learned Track
 
-Safety boundary (one line):
-Use only synthetic, public, generic, fictional, or user-created non-proprietary material. Do not use classified, CUI, ITAR/export-controlled, proprietary, customer, contract, internal schedule, internal finance, internal technical, real meeting note, real Microsoft Project, or real accounting data.
+Safety boundary:
+Use only synthetic, public, generic, fictional, or user-created non-proprietary material.
 
 Posture:
-Markdown-first, Gemini-first, platform-agnostic, human-in-the-loop, approved-tool-first. Build A-0054 Synthetic EVM Workbook under 08_SYNTHETIC_DEMOS/, A-0055 Project Accounting Reconciliation Walkthrough under 08_SYNTHETIC_DEMOS/, A-0056 Accounting Discrepancy Triage Workflow under 04_WORKFLOWS/ (W-NN id to follow append-only rule, likely W-17 since W-16 is reserved for process gap note). Cite Phase 3 governance envelope on each artifact. Pair against W-06, W-09, P-06, P-09. Log Phase 9 decisions in 10_DECISION_LOG/DECISION_LOG.md. Update 09_HANDOFFS/SESSION_HANDOFF.md with the Phase 10 next best prompt. Optional housekeeping: A-0038 Process Gap Note Workflow; A-0029 skill files refresh.
+Markdown-first, Gemini-first, platform-agnostic, human-in-the-loop, approved-tool-first. Build:
+- A-0057 SOP Template under 07_TEMPLATES/SOP_TEMPLATE.md (pairs W-11 / P-11)
+- A-0058 Lessons Learned Template under 07_TEMPLATES/LESSONS_LEARNED_TEMPLATE.md (pairs W-10 / P-10)
+- A-0059 Knowledge Base Pattern under 04_WORKFLOWS/KNOWLEDGE_BASE_PATTERN.md or 07_TEMPLATES/KNOWLEDGE_BASE_PATTERN.md as appropriate
+- A-0013 Lessons Learned Capture Workflow status: ready (pairs W-10) — likely hardened-in-place via the existing W-10 card; produce a Phase 10 demo if useful
+- A-0014 SOP Draft Generation Workflow status: ready (pairs W-11) — likely hardened-in-place via the existing W-11 card; produce a Phase 10 demo if useful
+
+Cite the Phase 3 governance envelope on each artifact. Log Phase 10 decisions in 10_DECISION_LOG/DECISION_LOG.md. Update 09_HANDOFFS/SESSION_HANDOFF.md with the Phase 11 next best prompt. Optional housekeeping: A-0038 Process Gap Note (W-16); A-0029 skill files; update SYNTHETIC_DEMO_PACK.md pack index with Phase 9 demos.
 ```

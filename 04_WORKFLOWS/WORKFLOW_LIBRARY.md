@@ -55,6 +55,7 @@ To add a new workflow:
 | W-13 | Cross-tool data mismatch investigation | A-0037 | Synthetic | Personal AI tool (Gemini-first) | Standard | `W-13-cross-tool-mismatch-investigation.md` |
 | W-14 | Google Workspace knowledge workflow | A-0020 | Public / Synthetic | Employer-approved AI tool (Workspace) | Standard | `W-14-google-workspace-knowledge.md` |
 | W-15 | Clearance-limited onboarding workflow | A-0068 | Tom-personal | ATLAS-local Markdown / Personal AI tool | Light | `W-15-clearance-limited-onboarding.md` |
+| W-17 | Accounting discrepancy triage workflow | A-0056 (Phase 9) | Synthetic | Personal AI tool (Gemini-first) | Standard | `W-17-accounting-discrepancy-triage.md` |
 
 Review intensity in the table is the default for personal-preparation use. When the same workflow is run against Employer-approved data in an Employer-approved AI tool, review intensity moves to Strict and the §14 migration notes in each card apply.
 
