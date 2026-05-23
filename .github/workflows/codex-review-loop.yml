@@ -29,6 +29,17 @@ name: Codex review loop
 #   Name: CLAUDE_CODE_OAUTH_TOKEN
 #   Value: (the token from step 2)
 #
+# After setting (or rotating) the secret, verify the workflow by
+# triggering it manually:
+#   Actions > Codex review loop > Run workflow > pick any PR number.
+# A failing "Verify required secret is present" step means the secret
+# is missing or empty; a failing "Run Claude Code on Codex feedback"
+# step after that means auth succeeded but the action itself errored.
+#
+# OAuth tokens can be revoked or rotated. If this workflow starts
+# failing at the "Verify required secret is present" step on a PR
+# that previously worked, regenerate the token and update the secret.
+#
 # This setup uses the Pro/Max subscription, not the Anthropic API.
 # Do not add ANTHROPIC_API_KEY.
 
@@ -71,6 +82,19 @@ jobs:
       issues: write
       id-token: write
     steps:
+      - name: Verify required secret is present
+        env:
+          OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          if [ -z "$OAUTH_TOKEN" ]; then
+            echo "::error::Repo secret CLAUDE_CODE_OAUTH_TOKEN is missing or empty."
+            echo "::error::Generate one locally with 'claude setup-token', then add it via:"
+            echo "::error::  GitHub > Settings > Secrets and variables > Actions > New repository secret"
+            echo "::error::Name: CLAUDE_CODE_OAUTH_TOKEN"
+            echo "::error::See the header comment in .github/workflows/codex-review-loop.yml for the full setup."
+            exit 1
+          fi
+
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
