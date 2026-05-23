@@ -117,6 +117,6 @@ Escalation triggers (stop iterating the AI draft, go to a human):
 
 - Phase 3 governance: `06_GOVERNANCE/DATA_SENSITIVITY_DECISION_MODEL.md`, `06_GOVERNANCE/HUMAN_REVIEW_AND_AUDITABILITY_MODEL.md`, `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`, `06_GOVERNANCE/AI_GOVERNANCE_NOTES.md`.
 - Backlog row: `03_BACKLOG/ARTIFACT_BACKLOG.md` A-0012.
-- Paired Phase 5 prompt: A-0043 Issue and Discrepancy Triage Prompt (TBD in Phase 5).
+- Paired Phase 5 prompt: P-08 Issue and Discrepancy Triage (`05_PROMPTS/P-08-issue-and-discrepancy-triage.md`, backlog A-0043).
 - Related demo: A-0051 Synthetic Discrepancy Triage Demo (Phase 7).
 - Related workflows: W-07 (risk register cleanup), W-13 (cross-tool mismatch).

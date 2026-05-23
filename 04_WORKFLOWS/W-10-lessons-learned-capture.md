@@ -117,6 +117,6 @@ Escalation triggers (stop iterating the AI draft, go to a human):
 
 - Phase 3 governance: `06_GOVERNANCE/DATA_SENSITIVITY_DECISION_MODEL.md`, `06_GOVERNANCE/HUMAN_REVIEW_AND_AUDITABILITY_MODEL.md`, `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`, `06_GOVERNANCE/AI_GOVERNANCE_NOTES.md`.
 - Backlog row: `03_BACKLOG/ARTIFACT_BACKLOG.md` A-0013 (Phase 10 deliverable; this card is the Phase 4 workflow that pairs with it).
-- Paired Phase 5 prompt: A-0046 Lessons Learned Capture Prompt (TBD in Phase 5).
+- Paired Phase 5 prompt: P-10 Lessons Learned Capture (`05_PROMPTS/P-10-lessons-learned-capture.md`, backlog A-0046).
 - Related template: A-0058 Lessons Learned Template (Phase 10).
 - Related workflows: W-11 (SOP draft generation).

@@ -116,5 +116,5 @@ Escalation triggers (stop iterating the AI draft, go to a human):
 
 - Phase 3 governance: `06_GOVERNANCE/DATA_SENSITIVITY_DECISION_MODEL.md`, `06_GOVERNANCE/HUMAN_REVIEW_AND_AUDITABILITY_MODEL.md`, `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`, `06_GOVERNANCE/AI_GOVERNANCE_NOTES.md`.
 - Backlog row: `03_BACKLOG/ARTIFACT_BACKLOG.md` A-0016 (Phase 8 deliverable; this card is the Phase 4 workflow that pairs with it).
-- Paired Phase 5 prompt: A-0047 Schedule Variance Narrative Prompt (TBD in Phase 5).
+- Paired Phase 5 prompt: P-05 Schedule Variance Narrative (`05_PROMPTS/P-05-schedule-variance-narrative.md`, backlog A-0047).
 - Related workflows: W-04 (schedule health review), W-06 (EVM variance explanation), W-13 (cross-tool mismatch).

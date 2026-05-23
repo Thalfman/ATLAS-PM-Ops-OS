@@ -120,5 +120,5 @@ Escalation triggers (stop iterating the AI draft, go to a human):
 - Phase 3 governance: `06_GOVERNANCE/DATA_SENSITIVITY_DECISION_MODEL.md`, `06_GOVERNANCE/HUMAN_REVIEW_AND_AUDITABILITY_MODEL.md`, `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`, `06_GOVERNANCE/AI_GOVERNANCE_NOTES.md`.
 - Backlog row: `03_BACKLOG/ARTIFACT_BACKLOG.md` A-0008.
 - Template: `07_TEMPLATES/EXECUTIVE_NARRATIVE.md`.
-- Paired Phase 5 prompt: A-0039 Weekly Status Drafting Prompt (TBD in Phase 5).
+- Paired Phase 5 prompt: P-01 Weekly Status Drafting (`05_PROMPTS/P-01-weekly-status-drafting.md`, backlog A-0039).
 - Related workflows: W-02 (meeting notes to actions), W-03 (action item aging), W-12 (executive brief generation).
