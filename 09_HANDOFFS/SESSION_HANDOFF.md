@@ -6,11 +6,11 @@
 
 ## Current phase
 
-**Phase 5 - Prompt Library (complete)**
+**Phase 6 - First-Week Readiness Kit (complete)**
 
 ## Session objective
 
-Build the Gemini-first, copy-paste-ready prompt library defined by the Phase 5 prompt: create `05_PROMPTS/PROMPT_LIBRARY.md` as the index, add a reusable 14-section prompt card template, author the 11 paired prompts that the backlog enumerates (one per AI-drafting workflow per D-0034), add the two utility prompts the Phase 5 prompt requires (universal safety precheck and prompt critique / output QA), wire each paired W-NN card's §15 cross-reference to the actual P-NN file, and reconcile the backlog. No new backlog rows added; existing prompt-library rows flipped to Ready for personal use. Phase 6 prompts come in the next session.
+Build the conservative First-Week Readiness Kit defined by the Phase 6 prompt: harden the two seeded templates (A-0005 First-Week Discovery Script, A-0006 Executive Narrative Template) and add the four not-started rows (A-0022 Clearance-Limited Value Plan, A-0048 Listening Plan, A-0049 Onboarding Question Set, A-0050 "What I Can Offer This Week" One-Pager). Add a kit master index (`FIRST_WEEK_READINESS_KIT.md`) and a utility AI Integration Discussion Guide tracked in the kit index, not the backlog. Each artifact cites the Phase 3 governance envelope by filename and references W-15 as the operating workflow. No new backlog rows; six existing rows flipped to `Ready for personal use`. Phase 7 (Synthetic Demo Pack) is next.
 
 ## Source-of-truth review
 
@@ -19,57 +19,53 @@ Confirm:
 - [x] Read `00_MASTER_CONTEXT/MASTER_CONTEXT.md` at session start.
 - [x] Read the previous `09_HANDOFFS/SESSION_HANDOFF.md` at session start.
 - [x] Working directory confirmed as `C:\Users\thalf\OneDrive\Documents\ATLAS-PM-Ops-OS`.
-- [x] Phase prompt `05_PROMPTS/PHASE_PROMPTS/PHASE_05_PROMPT_LIBRARY.md` consulted.
-- [x] Phase 3 governance bundle (`DATA_SENSITIVITY_DECISION_MODEL.md`, `HUMAN_REVIEW_AND_AUDITABILITY_MODEL.md`, `AI_TOOL_APPROVAL_STRATEGY.md`, `AI_GOVERNANCE_NOTES.md`) re-read to confirm citation pattern.
-- [x] Phase 4 workflow card template and 11 paired workflow cards re-read to keep each P-NN aligned with the corresponding W-NN's §5/§6/§7/§9/§13/§14.
+- [x] Phase prompt `05_PROMPTS/PHASE_PROMPTS/PHASE_06_FIRST_WEEK_READINESS_KIT.md` consulted.
+- [x] W-15 (`04_WORKFLOWS/W-15-clearance-limited-onboarding.md`) re-read; the kit inherits its governance envelope and operating-workflow pattern.
+- [x] Phase 3 governance bundle (`DATA_SENSITIVITY_DECISION_MODEL.md`, `HUMAN_REVIEW_AND_AUDITABILITY_MODEL.md`, `AI_TOOL_APPROVAL_STRATEGY.md`, `AI_GOVERNANCE_NOTES.md`, `AI_CONVERSATION_GUIDE.md`, `EMPLOYER_TOOL_APPROVAL_QUESTION_SET.md`) re-read to confirm citation pattern.
+- [x] Existing seeded `07_TEMPLATES/FIRST_WEEK_DISCOVERY_SCRIPT.md` and `07_TEMPLATES/EXECUTIVE_NARRATIVE.md` re-read before hardening.
 
 ## Files changed
 
 | Path | Type of change | Summary |
 |---|---|---|
-| `05_PROMPTS/PROMPT_LIBRARY.md` | added | Library index: universal prompt rules, governance bundle reference, schema reference, 16-row prompt index table (11 paired + 2 utility + 4 reserved-but-empty positions for W-04/13/14/15), maintenance and decision-log pointer, cross-references. |
-| `05_PROMPTS/PROMPT_CARD_TEMPLATE.md` | added | Reusable 14-section prompt template covering the Phase 5 prompt's 7 required fields plus governance envelope, paired-workflow citation, placeholders, failure modes, safety precheck citation, critique pass citation, identity, and cross-references. |
-| `05_PROMPTS/P-00-safety-precheck.md` | added | Universal pre-flight safety precheck cited by every paired P-NN card §12. Enforces `DATA_SENSITIVITY_DECISION_MODEL.md` classification flow and `HUMAN_REVIEW_AND_AUDITABILITY_MODEL.md` pre-flight checklist as a self-administered gate. |
-| `05_PROMPTS/P-99-prompt-critique-and-output-qa.md` | added | Post-flight critique pass cited by every paired P-NN card §13. Returns structured findings (trace-to-source, fabricated detail, overclaim, missing fields, tone, W-NN red-flag matches); does not rewrite the draft. |
-| `05_PROMPTS/P-01-weekly-status-drafting.md` | added | Pairs W-01 / A-0039. Per-domain pattern Status and reporting. Source-trace appendix discipline. |
-| `05_PROMPTS/P-02-meeting-notes-to-actions.md` | added | Pairs W-02 / A-0040. Per-domain pattern Meeting notes to action items. Owner/date "missing field" labeling. |
-| `05_PROMPTS/P-03-action-aging-summary.md` | added | Pairs W-03 / A-0041. Per-domain pattern Meeting notes to action items. Aging classification with reason; neutral follow-up drafts. |
-| `05_PROMPTS/P-05-schedule-variance-narrative.md` | added | Pairs W-05 / A-0047. Per-domain pattern Schedule outputs. Causes framed as observations; number-trace appendix. |
-| `05_PROMPTS/P-06-evm-variance-explanation.md` | added | Pairs W-06 / A-0018. Per-domain pattern Finance, EVM, and project accounting. Recompute discipline baked into the prompt. |
-| `05_PROMPTS/P-07-risk-register-cleanup.md` | added | Pairs W-07 / A-0042. Per-domain pattern Risk and issue triage. Condition-consequence rewrite; hygiene-notes list. |
-| `05_PROMPTS/P-08-issue-and-discrepancy-triage.md` | added | Pairs W-08 / A-0043. Per-domain pattern Risk and issue triage. Severity and owner stay with Tom; AI proposes investigation questions. |
-| `05_PROMPTS/P-09-accounting-reconciliation-narrative.md` | added | Pairs W-09 / A-0019. Per-domain pattern Finance, EVM, and project accounting. Four-view discrepancy structure. |
-| `05_PROMPTS/P-10-lessons-learned-capture.md` | added | Pairs W-10 / A-0046. Per-domain pattern SOP and lessons-learned. Process / information-flow / tool framing; no individual blame. |
-| `05_PROMPTS/P-11-sop-first-draft.md` | added | Pairs W-11 / A-0045. Per-domain pattern SOP and lessons-learned. Testable steps; owner is a role. |
-| `05_PROMPTS/P-12-executive-brief-drafting.md` | added | Pairs W-12 / A-0044. Per-domain pattern Status and reporting. Compress without invention; forward-looking statements marked; source-fact appendix. |
-| `04_WORKFLOWS/W-01..W-12.md` (11 paired cards) | updated | §15 "Paired Phase 5 prompt" line rewritten to name the actual P-NN file path with both the P-ID and the backlog A-ID. W-04, W-13, W-14, W-15 left unchanged. |
-| `03_BACKLOG/ARTIFACT_BACKLOG.md` | updated | 11 prompt-library rows (A-0018, A-0019, A-0039..A-0047) flipped from `Not started` to `Ready for personal use`; Notes column on each row updated to point at the paired P-NN file and the paired W-NN card. "Current build recommendation" tail paragraph rewritten to mark Phase 5 complete and name Phase 6 as next, with A-0038 and A-0029 noted as optional housekeeping follow-ups. |
-| `10_DECISION_LOG/DECISION_LOG.md` | updated | Appended D-0035..D-0039 covering P-NN naming, the 14-section prompt card schema, the hybrid layout, the universal P-00 / P-99 utility-prompt pattern, and the branch deviation. |
-| `00_MASTER_CONTEXT/MASTER_CONTEXT.md` | updated | Bumped current build stage to "Phase 5 - Prompt Library (complete)" and rewrote "Immediate objective" to describe the Phase 5 deliverable set and name Phase 6 (First-Week Readiness Kit) as next. |
+| `07_TEMPLATES/FIRST_WEEK_READINESS_KIT.md` | added | Kit master index: purpose, governance envelope citation, use posture, kit index table, universal kit rules, 14-bucket coverage map naming where each Phase 6 prompt bucket lives, maintenance notes, cross-references. |
+| `07_TEMPLATES/FIRST_WEEK_DISCOVERY_SCRIPT.md` | updated | Hardened A-0005: added artifact identity header, governance envelope, use posture, first-manager-1:1 questions, stakeholder listening-tour questions, knowledge-management/Workspace questions, expanded AI workflow discovery questions, clearance-limited contribution options, things-not-to-do-in-week-one list, end-of-week summary template, end-of-week reflection prompts, cross-references. |
+| `07_TEMPLATES/EXECUTIVE_NARRATIVE.md` | updated | Hardened A-0006: added artifact identity header, governance envelope, PM/Ops + AI integration positioning paragraph, explicit forward-looking marker, reviewer sign-off line, narrative quality checklist, failure modes, migration notes, cross-references to W-12 / P-12 / P-99 / P-00. |
+| `07_TEMPLATES/CLEARANCE_LIMITED_VALUE_PLAN.md` | added | A-0022 Clearance-Limited Value Plan: eight value categories (ATLAS hardening, public study, synthetic-demo refinement, listening-tour prep, process-gap notes, SOP first drafts, executive-narrative practice, governance familiarity), visible-artifact discipline, do-not-promise list, end-of-week reflection. |
+| `07_TEMPLATES/LISTENING_PLAN.md` | added | A-0048 Listening Plan: daily-entry shape, what-to-capture vs what-not-to-capture lists, sanitization filter (six-question gate), weekly Friday reflection. Pairs with future W-16. |
+| `07_TEMPLATES/ONBOARDING_QUESTION_SET.md` | added | A-0049 Onboarding Question Set: six audience-split banks (manager, peers, IT, security, compliance, program leadership) with venue / rapport / clearance markers, tailoring discipline, cross-references to `06_GOVERNANCE/EMPLOYER_TOOL_APPROVAL_QUESTION_SET.md`. |
+| `07_TEMPLATES/WHAT_I_CAN_OFFER_THIS_WEEK.md` | added | A-0050 "What I Can Offer This Week" one-pager: template with commitments / not-committing-to / AI posture / question-for-manager / sign-off, drafting checklist, red flags mirroring W-15 §11, escalation triggers mirroring W-15 §13, migration notes. Scope rule logged as D-0044. |
+| `07_TEMPLATES/AI_INTEGRATION_DISCUSSION_GUIDE.md` | added | Utility template (kit-index-tracked per D-0043): Tom's framing for AI questions, what-to-bring / what-not-to-bring lists, conversational openers, audience-by-audience talking points, synthetic-demo usage rules, drift recovery moves, post-conversation capture rules. Parent reference: `06_GOVERNANCE/AI_CONVERSATION_GUIDE.md`. |
+| `03_BACKLOG/ARTIFACT_BACKLOG.md` | updated | Six first-week-readiness rows (A-0005, A-0006, A-0022, A-0048, A-0049, A-0050) flipped from `Seeded` / `Not started` to `Ready for personal use` with Notes columns pointing at the kit file paths and the kit index. "Current build recommendation" tail rewritten to mark Phase 6 complete and name Phase 7 as next, carrying forward A-0038 and A-0029 as optional housekeeping. |
+| `10_DECISION_LOG/DECISION_LOG.md` | updated | Appended D-0040..D-0044 covering the Phase 6 branch deviation, the kit hybrid layout, the governance-envelope citation discipline, the utility-template status of the AI Integration Discussion Guide, and the scoping rule for the manager-shared one-pager. |
+| `00_MASTER_CONTEXT/MASTER_CONTEXT.md` | updated | Bumped current build stage to "Phase 6 - First-Week Readiness Kit (complete)" and rewrote "Immediate objective" to describe the eight-file kit and name Phase 7 (Synthetic Demo Pack) as the next objective. |
 
 ## Completed work
 
-- Authored `05_PROMPTS/PROMPT_LIBRARY.md` as a navigable index: library purpose, universal prompt rules, governance bundle reference, schema reference, 16-row prompt index table, maintenance notes, cross-references.
-- Authored `05_PROMPTS/PROMPT_CARD_TEMPLATE.md` as the reusable 14-section template all paired prompt cards conform to.
-- Authored 11 paired prompt cards (P-01..P-03, P-05..P-12) end to end. Each card has all 14 sections; each cites the Phase 3 governance bundle by filename and the paired W-NN card by ID; each pulls Safe inputs, Prohibited inputs, Output format, Human review, Failure modes, and Migration notes directly from the paired W-NN card (no policy re-litigation at the prompt layer).
-- Authored two utility prompts: `P-00-safety-precheck.md` (cited by every paired P-NN §12) and `P-99-prompt-critique-and-output-qa.md` (cited by every paired P-NN §13).
-- Wired the 11 paired W-NN cards' §15 cross-reference from "(TBD in Phase 5)" to the actual P-NN file path with both P-ID and A-ID. The four unpaired W-NN cards (W-04, W-13, W-14, W-15) left unchanged per D-0034.
-- Reconciled `03_BACKLOG/ARTIFACT_BACKLOG.md`: 11 status flips, 11 Notes updates, "Current build recommendation" rewritten.
-- Logged five Phase 5 decisions in `10_DECISION_LOG/DECISION_LOG.md` (`D-0035` through `D-0039`) in the same session.
-- Updated `00_MASTER_CONTEXT/MASTER_CONTEXT.md` to mark Phase 5 complete and name Phase 6 as the next objective.
-- Worked Phase 5 on branch `claude/atlas-pm-ops-phase-UXSqk` (deviation from the `feat/phase-NN-<slug>` convention is documented in D-0039, parallel to D-0033 for Phase 4).
+- Authored `07_TEMPLATES/FIRST_WEEK_READINESS_KIT.md` as the kit master index with a 14-bucket coverage map showing exactly which sub-file covers each Phase 6 prompt bucket.
+- Hardened `07_TEMPLATES/FIRST_WEEK_DISCOVERY_SCRIPT.md` (A-0005): added the governance envelope, W-15 reference, first-manager-1:1 questions, stakeholder listening-tour questions, knowledge-management / Workspace questions, expanded AI workflow discovery questions, clearance-limited contribution options, a things-not-to-do-in-week-one list, and an end-of-week summary template. Preserved the original opening positioning and the existing five domain question sets.
+- Hardened `07_TEMPLATES/EXECUTIVE_NARRATIVE.md` (A-0006): added the governance envelope, the PM/Ops + AI integration positioning paragraph, explicit forward-looking marker in the template, reviewer sign-off line, failure modes, and migration notes. Preserved the existing seven-section narrative template; tightened the use rules.
+- Authored `07_TEMPLATES/CLEARANCE_LIMITED_VALUE_PLAN.md` (A-0022) with eight value categories and a do-not-promise list mirroring the W-15 §11 red flags.
+- Authored `07_TEMPLATES/LISTENING_PLAN.md` (A-0048) with a sanitization filter that prevents restricted content from entering ATLAS or Tom-personal notes.
+- Authored `07_TEMPLATES/ONBOARDING_QUESTION_SET.md` (A-0049) with six audience-split banks (manager / peers / IT / security / compliance / program leadership), each tagged for venue / rapport / clearance state.
+- Authored `07_TEMPLATES/WHAT_I_CAN_OFFER_THIS_WEEK.md` (A-0050) with a drafting checklist and red-flag list that explicitly mirror W-15 §11 and §13.
+- Authored `07_TEMPLATES/AI_INTEGRATION_DISCUSSION_GUIDE.md` as a kit-layer companion to `06_GOVERNANCE/AI_CONVERSATION_GUIDE.md`; tracked in the kit master index per D-0043, not the backlog.
+- Reconciled `03_BACKLOG/ARTIFACT_BACKLOG.md`: six status flips, six Notes updates, "Current build recommendation" rewritten.
+- Logged five Phase 6 decisions in `10_DECISION_LOG/DECISION_LOG.md` (D-0040..D-0044) in the same session.
+- Updated `00_MASTER_CONTEXT/MASTER_CONTEXT.md` to mark Phase 6 complete and name Phase 7 as the next objective.
+- Worked Phase 6 on branch `claude/atlas-pm-ops-phase-OhdyH` (deviation from the `feat/phase-NN-<slug>` convention is documented in D-0040, parallel to D-0033 for Phase 4 and D-0039 for Phase 5).
 
 ## Decisions made
 
 | Decision | Rationale | File or area impacted |
 |---|---|---|
-| Adopt `P-NN-<slug>.md` naming with reserved-but-empty gaps at P-04, P-13, P-14, P-15 to mirror the W-NN pairing visibly; utility prompts at P-00 and P-99. | Stable IDs across phases; reserved gaps make the 11/15 pairing visible at a glance and prevent re-litigation. | `05_PROMPTS/` and the library index. |
-| Adopt a 14-section prompt card schema (7 required Phase 5 fields + governance envelope + paired-workflow citation + placeholders + failure modes + safety precheck + critique pass + identity + cross-references). | One named schema prevents per-prompt reinvention and structurally aligns each P-NN with its paired W-NN. | `05_PROMPTS/PROMPT_CARD_TEMPLATE.md` and all 11 paired prompts. |
-| Structure `05_PROMPTS/` as a hybrid (index + template + per-prompt files + 2 utility prompts) rather than a single long file. | 14-section per-prompt files would make a single library file merge-hostile; per-file structure parallels Phase 4 (D-0031) and gives Codex review per-line precision. | `05_PROMPTS/` layout. |
-| Author `P-00-safety-precheck.md` and `P-99-prompt-critique-and-output-qa.md` once and cite from every paired P-NN §12 and §13 respectively, rather than restating the precheck and critique in each card. Neither is a new backlog row; both are tracked in the library index. | One canonical precheck and one canonical critique prevent drift across 11 paired prompts. Tracking utility prompts in the library index matches the existing precedent for template files. | `05_PROMPTS/` and every paired prompt's §12/§13. |
-| Perform Phase 5 on branch `claude/atlas-pm-ops-phase-UXSqk` rather than the conventional `feat/phase-05-prompt-library`. CLAUDE.md commit and branch policy otherwise applies. | The branch was constrained by the operating environment before the session began (parallel to D-0033 for Phase 4); switching mid-flight would create churn without benefit. Deviation is narrow, not a precedent. | Git. |
+| Perform Phase 6 on the constrained branch `claude/atlas-pm-ops-phase-OhdyH`. CLAUDE.md commit and branch policy otherwise applies. | Branch was created by the operating environment before the session began; parallel to D-0033 and D-0039. The deviation is narrow, not a precedent. | Git. |
+| Structure Phase 6 as a hybrid: kit master index + six backlog-row files + one utility template under `07_TEMPLATES/`. | Per-artifact files parallel the Phase 4 (D-0031) and Phase 5 (D-0037) hybrids, give Codex per-line review precision, and let each artifact name a visible-artifact contract. | `07_TEMPLATES/` layout. |
+| Each kit file cites the Phase 3 governance envelope by filename and references W-15 as the operating workflow; no policy is restated at the kit-artifact layer. | Mirrors the Phase 4 §4 / Phase 5 §3 envelope discipline (D-0029, D-0036); citing rather than restating prevents drift across the seven kit files. | All `07_TEMPLATES/` Phase 6 files. |
+| The AI Integration Discussion Guide is a utility template tracked in the kit master index, not the backlog. It cites `06_GOVERNANCE/AI_CONVERSATION_GUIDE.md` as the parent reference and does not restate it. | The Phase 6 prompt names the guide as a deliverable but no backlog row exists; tracking it in the kit index parallels the P-00 / P-99 utility-prompt pattern (D-0038). | `07_TEMPLATES/AI_INTEGRATION_DISCUSSION_GUIDE.md` and the kit index. |
+| The "What I Can Offer This Week" one-pager must not commit to scope outside the manager-agreed clearance-limited posture; red flags mirror W-15 §11 and escalation triggers mirror W-15 §13. | The one-pager is the kit artifact most at risk of overclaim drift; naming the scoping rule at the decision-log layer keeps it authoritative across future edits and review rounds. | `07_TEMPLATES/WHAT_I_CAN_OFFER_THIS_WEEK.md`. |
 
-These decisions are logged in this session as `D-0035` through `D-0039` in `10_DECISION_LOG/DECISION_LOG.md`, in the same order as the table above.
+These decisions are logged in this session as `D-0040` through `D-0044` in `10_DECISION_LOG/DECISION_LOG.md`, in the same order as the table above.
 
 ## Safety review
 
@@ -81,9 +77,9 @@ Confirm:
 - [x] No ITAR or export-controlled data used.
 - [x] No proprietary, customer, contract, internal schedule, internal finance, or internal technical data used.
 - [x] No real program names, real meeting notes, real Microsoft Project files, or real project accounting exports used.
-- [x] All examples are synthetic, public, generic, fictional, or user-created. Every prompt uses placeholders (`[SYNTHETIC_PROJECT_NAME]`, `[APPROVED_INPUT]`, `[FICTIONAL_VARIANCE]`, `[PLACEHOLDER_OWNER]`, `[SYNTHETIC_PERIOD]`, `[FICTIONAL_ACTIVITY_ID]`, `[SYNTHETIC_OWNER_ROLE]`, `[SYNTHETIC_EVENT_TITLE]`, `[SYNTHETIC_DATE]`, `[SYNTHETIC_MEETING_TITLE]`, `[STATUS_COLOR_OR_TREND]`, `[CANDIDATE_INPUT]`, `[PAIRED_W_ID]`, `[NAMED_REVIEWER]`, `[CHOSEN_TOOL_ENVIRONMENT]`, `[PAIRED_PROMPT_ID]`, `[PAIRED_WORKFLOW_ID]`, `[AI_OUTPUT]`, `[SOURCE_INPUT]`).
-- [x] Human-in-the-loop posture preserved (every paired prompt names the human reviewer, cites the per-domain review pattern, and forbids AI from deciding, approving, escalating, or sending).
-- [x] Gemini-first and platform-agnostic posture preserved (prompts use generic "AI assistant" framing and do not assume Gemini-specific syntax).
+- [x] All examples are synthetic, public, generic, fictional, or Tom-personal. Every template uses placeholders (`[YYYY-MM-DD]`, `[Synthetic placeholder]`, `[Name/role]`, `[Manager's name and role]`, `[Verb-led commitment]`, `[Date range]`, `[Confirmed fact 1..3]`, `[Schedule implication, if known]`, `[Cost/resource implication, if known]`, `[Description]`, `[Owner or TBD]`, `[Next action]`, `[Forecast or projection]`, `[Action] — Owner — Due`, `[Question or assumption]`, `[Adjustments after review]`).
+- [x] Human-in-the-loop posture preserved: every kit artifact names the named human reviewer (Tom for daily practice, manager for the weekly one-pager), cites the per-domain review pattern, and forbids AI from deciding, approving, sending, or committing.
+- [x] Gemini-first and platform-agnostic posture preserved: kit artifacts use generic "AI assistant" framing and `06_GOVERNANCE/AI_CONVERSATION_GUIDE.md`'s tool-agnostic talking points; no Gemini-specific syntax assumed.
 - [x] No app, package, API, database, deployment, or code scaffolding added.
 
 ## Definition-of-done check
@@ -91,39 +87,40 @@ Confirm:
 Confirm:
 
 - [x] Every artifact created or updated is Markdown-first and portable.
-- [x] Every artifact has a clear purpose and an obvious human review step where relevant.
-- [x] No artifact assumes access or data Tom may not have during clearance-limited onboarding.
+- [x] Every artifact has a clear purpose and an obvious human review step where relevant (Tom for personal practice; manager for the weekly one-pager).
+- [x] No artifact assumes access or data Tom may not have during clearance-limited onboarding. The do-not-promise list in `CLEARANCE_LIMITED_VALUE_PLAN.md` and the red flags in `WHAT_I_CAN_OFFER_THIS_WEEK.md` make this explicit.
 - [x] This handoff file is up to date and contains the next best prompt.
-- [x] Significant decisions from this session are logged in `10_DECISION_LOG/DECISION_LOG.md` in this same session (entries `D-0035` through `D-0039`); none deferred.
-- [x] Mode-gated commit step from the session-end protocol is satisfied: local-agent mode committed Phase 5 changes on branch `claude/atlas-pm-ops-phase-UXSqk` in small Conventional Commits and will open a PR against `main` at session end.
+- [x] Significant decisions from this session are logged in `10_DECISION_LOG/DECISION_LOG.md` in this same session (entries `D-0040` through `D-0044`); none deferred.
+- [x] Mode-gated commit step from the session-end protocol is satisfied: local-agent mode commits Phase 6 changes on branch `claude/atlas-pm-ops-phase-OhdyH` in small Conventional Commits and opens a PR against `main` at session end.
 
 ## Open items
 
-- A-0038 Process Gap Note Workflow remains `Not started` (carried from Phase 4). Build as `W-16-process-gap-note.md` either during Phase 6 (it pairs naturally with the First-Week Readiness Kit's listening discipline) or as a short follow-up session before Phase 6 begins.
-- A-0029 Local skill files refresh remains `Not started`. The Phase 5 patterns are now stable along with Phase 4; the three `skills/*/SKILL.md` files can be reviewed against the combined workflow + prompt card schema. Pair with the Phase 6 build or a chore branch.
-- Each paired P-NN card's "Number trace" / "Source trace" appendix is described in the §7 prompt text but not exemplified. Phase 7 (Synthetic Demo Pack) is the natural place to add worked examples that exercise the trace appendix end-to-end.
+- A-0038 Process Gap Note Workflow remains `Not started` (carried from Phase 4). It pairs naturally with the Phase 6 listening plan (`LISTENING_PLAN.md`); build as `W-16-process-gap-note.md` either during Phase 7 or as a short follow-up session.
+- A-0029 Local skill files refresh remains `Not started`. The Phase 4 / 5 / 6 patterns are now stable; the three `skills/*/SKILL.md` files can be reviewed against the combined workflow + prompt + kit schemas. Pair with the Phase 7 build or a chore branch.
+- The kit's listening plan and clearance-limited value plan reference the future `04_WORKFLOWS/W-16-process-gap-note.md`. The cross-reference is fine while W-16 is unbuilt; when W-16 lands, update both files' cross-reference sections in the same session.
+- Phase 7 demos will exercise the Phase 4 W-NN cards and Phase 5 P-NN paired prompts end-to-end. The Phase 6 kit assumes a Phase 7 demo pack will exist; the discussion guide and value plan reference `08_SYNTHETIC_DEMOS/` content even though most rows in that folder are not yet built. This is by design - the references will resolve as Phase 7 lands.
 
 ## Risks and cautions
 
-- The prompt library is conservative on purpose. Several prompts (P-05, P-06, P-07, P-08, P-09) explicitly forbid the AI from assigning severity, owner, probability, impact, or accounting cause; that is the intended posture, not a gap.
-- P-00's eight-line checklist is the discipline gate for every paired P-NN. If Phase 6+ surfaces a missing precheck condition (e.g., a new tool environment from onboarding), update P-00 in place and let the citation chain propagate; do not patch individual paired prompts.
-- P-99's findings list is not a fix list. The reviewer (Tom or the accountable owner) decides what to fix. If Phase 7 demos start treating P-99 output as an auto-fix, raise as a posture issue.
-- The 11/15 pairing per D-0034 is fixed. Future phases that surface a new AI-drafting workflow should follow the Phase 4 → Phase 5 sequence: add a W-NN card first, then a paired P-NN with the next available number.
+- The First-Week Readiness Kit is conservative on purpose. Several artifacts (notably the one-pager and the value plan) explicitly limit scope to personal-preparation work and forbid commitments that depend on cleared access; that is the intended posture, not a gap. Future review feedback that tries to broaden the kit into employer-deployable scope should be redirected to Phase 11 (Employer Migration).
+- The listening plan's six-question sanitization filter is the discipline gate. If a future entry would not survive the filter, the right move is to forget the entry for ATLAS purposes - not to soften the filter. Loosening the filter would require a new logged decision per D-0042's spirit.
+- The "What I Can Offer This Week" one-pager is the kit artifact most exposed to overclaim drift. D-0044's scoping rule is the binding constraint; any review request to loosen it requires a new logged decision before being accepted.
+- The AI Integration Discussion Guide is a kit-layer companion to `06_GOVERNANCE/AI_CONVERSATION_GUIDE.md`, not a replacement. Edits that drift from the parent governance file should update the governance file first and then propagate to the kit guide through citation.
 
 ## AI tooling notes
 
-The 11 paired prompts are authored Gemini-first and platform-agnostic. Personal AI tools (Claude, ChatGPT, Gemini consumer) are the default tool environment for personal-preparation use; an Employer-approved AI tool only enters the picture once explicit approval exists for the specific data category, per the six-step pattern in `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`. Every paired prompt's §7 forbids the AI from deciding, approving, escalating, or sending; AI's role is strictly to structure, compare, summarize, draft, or flag inconsistencies. P-00 sits in front of every prompt as a self-administered gate. P-99 sits after every Strict-intensity prompt as a structured critique pass.
+The Phase 6 kit is authored Gemini-first and platform-agnostic. Personal AI tools (Claude, ChatGPT, Gemini consumer) are the default tool environment for personal-preparation use - on Synthetic / Public / Tom-personal inputs only. An Employer-approved AI tool only enters the picture once explicit approval exists for the specific data category, per the six-step pattern in `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md`. Every kit artifact's governance envelope makes the data-category and tool-environment routing explicit. The AI Integration Discussion Guide's hard-do-not list is restated locally for kit-conversation use but is anchored to `06_GOVERNANCE/AI_CONVERSATION_GUIDE.md` as the source of truth.
 
 ## Recommended next phase or artifact
 
-**Phase 6: First-Week Readiness Kit**
+**Phase 7: Synthetic Demo Pack**
 
-Assemble the conservative kit Tom uses during clearance-limited onboarding. The kit builds on (or hardens) existing seeded artifacts (A-0005 First-Week Discovery Script, A-0006 Executive Narrative Template) and adds the not-started rows (A-0022 Clearance-Limited Value Plan, A-0048 Listening Plan, A-0049 Onboarding Question Set, A-0050 "What I Can Offer This Week" One-Pager). Phase 6 inherits the same Phase 3 governance envelope (data category, tool environment, review intensity, per-domain review pattern) and aligns with W-15 (`W-15-clearance-limited-onboarding.md`) as its operating workflow. The kit must explicitly avoid promising deliverables that depend on restricted access; W-15's "feel-good but undercommit" risk note in §13 carries forward into Phase 6.
+Build fictional demonstrations that prove ATLAS workflow value without real employer data. Phase 7 exercises the Phase 4 W-NN workflow cards and the Phase 5 P-NN paired prompts end-to-end against synthetic inputs. Backlog rows: A-0007 (Synthetic Status Pack Demo, already Seeded) and not-started rows A-0023 (Synthetic Schedule Variance Demo), A-0024 (Synthetic Action Tracker Demo), A-0051 (Synthetic Discrepancy Triage Demo), A-0052 (Synthetic Risk Register Cleanup Demo). Each demo cites the Phase 3 governance envelope and the paired W-NN / P-NN pair by ID, walks input → AI step → human review → output as a pattern (not as a product), and is explicitly labeled synthetic. Demos must be safe to show in an early conversation with a manager or peer without ever blending in real data.
 
-Optional housekeeping during or after Phase 6:
+Optional housekeeping during or after Phase 7:
 
-- Build A-0038 Process Gap Note as `04_WORKFLOWS/W-16-process-gap-note.md`. The note pattern pairs naturally with the Phase 6 listening plan.
-- Refresh A-0029 local skill files (`skills/*/SKILL.md`) against the now-stable Phase 4 workflow card and Phase 5 prompt card schemas.
+- Build A-0038 Process Gap Note as `04_WORKFLOWS/W-16-process-gap-note.md`. Pairs naturally with the Phase 6 listening plan.
+- Refresh A-0029 local skill files (`skills/*/SKILL.md`) against the Phase 4 / 5 / 6 schemas.
 
 ## Next best prompt
 
@@ -139,25 +136,24 @@ Source-of-truth files to read first:
 3. 02_ROADMAP/ROADMAP.md
 4. 03_BACKLOG/ARTIFACT_BACKLOG.md
 5. 04_WORKFLOWS/WORKFLOW_LIBRARY.md
-6. 04_WORKFLOWS/W-15-clearance-limited-onboarding.md
-7. 05_PROMPTS/PROMPT_LIBRARY.md
-8. 06_GOVERNANCE/DATA_SENSITIVITY_DECISION_MODEL.md
-9. 06_GOVERNANCE/HUMAN_REVIEW_AND_AUDITABILITY_MODEL.md
-10. 06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md
-11. 06_GOVERNANCE/AI_GOVERNANCE_NOTES.md
-12. 07_TEMPLATES/FIRST_WEEK_DISCOVERY_SCRIPT.md
-13. 07_TEMPLATES/EXECUTIVE_NARRATIVE.md
-14. 05_PROMPTS/PHASE_PROMPTS/PHASE_06_FIRST_WEEK_READINESS_KIT.md
+6. 05_PROMPTS/PROMPT_LIBRARY.md
+7. 06_GOVERNANCE/DATA_SENSITIVITY_DECISION_MODEL.md
+8. 06_GOVERNANCE/HUMAN_REVIEW_AND_AUDITABILITY_MODEL.md
+9. 06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md
+10. 06_GOVERNANCE/AI_GOVERNANCE_NOTES.md
+11. 07_TEMPLATES/FIRST_WEEK_READINESS_KIT.md
+12. 08_SYNTHETIC_DEMOS/SYNTHETIC_STATUS_PACK_DEMO.md
+13. 05_PROMPTS/PHASE_PROMPTS/PHASE_07_SYNTHETIC_DEMO_PACK.md
 
 Phase to run:
-Phase 6: First-Week Readiness Kit
+Phase 7: Synthetic Demo Pack
 
 Phase prompt file:
-05_PROMPTS/PHASE_PROMPTS/PHASE_06_FIRST_WEEK_READINESS_KIT.md
+05_PROMPTS/PHASE_PROMPTS/PHASE_07_SYNTHETIC_DEMO_PACK.md
 
 Safety boundary (one line):
 Use only synthetic, public, generic, fictional, or user-created non-proprietary material. Do not use classified, CUI, ITAR/export-controlled, proprietary, customer, contract, internal schedule, internal finance, internal technical, real meeting note, real Microsoft Project, or real accounting data.
 
 Posture:
-Markdown-first, Gemini-first, platform-agnostic, human-in-the-loop, approved-tool-first. Do not add apps, package dependencies, APIs, databases, deployment files, or code scaffolding. Build the First-Week Readiness Kit under 07_TEMPLATES/ (or the location each backlog row names) so that Tom can use it during clearance-limited onboarding without touching restricted content. Cover the existing seeded artifacts (A-0005 First-Week Discovery Script — harden it; A-0006 Executive Narrative Template — harden it) plus the not-started rows (A-0022 Clearance-Limited Value Plan, A-0048 Listening Plan, A-0049 Onboarding Question Set, A-0050 "What I Can Offer This Week" One-Pager). Each artifact cites the Phase 3 governance envelope by name (data category from DATA_SENSITIVITY_DECISION_MODEL.md, tool environment, review intensity from HUMAN_REVIEW_AND_AUDITABILITY_MODEL.md, per-domain review pattern) and references W-15 (W-15-clearance-limited-onboarding.md) as the operating workflow. Each artifact must avoid promising deliverables that depend on restricted access. Log Phase 6 decisions in 10_DECISION_LOG/DECISION_LOG.md in the same session. Update 09_HANDOFFS/SESSION_HANDOFF.md at the end with the Phase 7 next best prompt. Optional housekeeping: build A-0038 Process Gap Note Workflow as 04_WORKFLOWS/W-16-process-gap-note.md (paired Phase 5 prompt: none expected; it is a personal-note workflow), and refresh A-0029 local skill files against the Phase 4 / 5 schemas.
+Markdown-first, Gemini-first, platform-agnostic, human-in-the-loop, approved-tool-first. Do not add apps, package dependencies, APIs, databases, deployment files, or code scaffolding. Build the synthetic demo pack under 08_SYNTHETIC_DEMOS/ so each demo exercises a Phase 4 W-NN workflow card paired with the matching Phase 5 P-NN prompt end-to-end on fictional input. Demos must be labeled synthetic at the top, walk input → AI step → human review → output as a pattern, never blend in real data, and never claim deployment-readiness. Cover the seeded A-0007 (Synthetic Status Pack Demo, already at 08_SYNTHETIC_DEMOS/SYNTHETIC_STATUS_PACK_DEMO.md - harden if needed) and the not-started rows A-0023 (Synthetic Schedule Variance Demo, pair with W-05 / P-05), A-0024 (Synthetic Action Tracker Demo, pair with W-02 / P-02 and W-03 / P-03), A-0051 (Synthetic Discrepancy Triage Demo, pair with W-08 / P-08), A-0052 (Synthetic Risk Register Cleanup Demo, pair with W-07 / P-07). Each demo cites the Phase 3 governance envelope by name (data category Synthetic; tool environment ATLAS-local Markdown with Personal AI tool acceptable; review intensity Light for synthetic practice; per-domain review pattern matched to the demo). Log Phase 7 decisions in 10_DECISION_LOG/DECISION_LOG.md in the same session. Update 09_HANDOFFS/SESSION_HANDOFF.md at the end with the Phase 8 next best prompt. Optional housekeeping: build A-0038 Process Gap Note Workflow as 04_WORKFLOWS/W-16-process-gap-note.md (paired Phase 5 prompt: none expected; it is a personal-note workflow), and refresh A-0029 local skill files against the Phase 4 / 5 / 6 schemas.
 ```
