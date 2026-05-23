@@ -71,22 +71,25 @@ Work to perform:
 6. Make prompts usable in Gemini Enterprise first, but transferable to any approved enterprise AI tool.
 
 Prompt library categories should include:
+
+Scope clarification (per Phase 4 D-0034): The Phase 4 workflow library has 15 cards (W-01..W-15), but only 11 of them are AI-drafting workflows that need a dedicated paired prompt. The other four (W-04 schedule health, W-13 cross-tool mismatch, W-14 Google Workspace knowledge, W-15 clearance-limited onboarding) are structural, investigative, information-management, or personal-planning workflows and carry "Paired Phase 5 prompt: none" in their §15. The backlog defines exactly 11 Phase 5 prompt rows (A-0018, A-0019, A-0039..A-0047). Categories marked "no dedicated prompt" below stay in this list as a record of what was considered, but Phase 5 does not author prompts for them.
+
 - Universal safety precheck prompt
-- Weekly status report prompt
-- Meeting notes to action items prompt
-- Action item aging and follow-up prompt
-- Schedule health review prompt
-- Schedule variance narrative prompt
-- EVM variance explanation prompt
-- Risk register cleanup prompt
-- Issue/discrepancy triage prompt
-- Project accounting reconciliation narrative prompt
-- Lessons learned capture prompt
-- SOP draft generation prompt
-- Executive brief generation prompt
-- Cross-tool mismatch investigation prompt
-- Google Workspace knowledge workflow prompt
-- Clearance-limited onboarding support prompt
+- Weekly status report prompt (pairs with W-01; backlog A-0039)
+- Meeting notes to action items prompt (pairs with W-02; backlog A-0040)
+- Action item aging and follow-up prompt (pairs with W-03; backlog A-0041)
+- Schedule health review prompt — no dedicated prompt (W-04 is structural; AI plays an identification role, not a drafting role)
+- Schedule variance narrative prompt (pairs with W-05; backlog A-0047)
+- EVM variance explanation prompt (pairs with W-06; backlog A-0018)
+- Risk register cleanup prompt (pairs with W-07; backlog A-0042)
+- Issue/discrepancy triage prompt (pairs with W-08; backlog A-0043)
+- Project accounting reconciliation narrative prompt (pairs with W-09; backlog A-0019)
+- Lessons learned capture prompt (pairs with W-10; backlog A-0046)
+- SOP draft generation prompt (pairs with W-11; backlog A-0045)
+- Executive brief generation prompt (pairs with W-12; backlog A-0044)
+- Cross-tool mismatch investigation prompt — no dedicated prompt (W-13 is investigative; AI proposes candidate causes, not drafts)
+- Google Workspace knowledge workflow prompt — no dedicated prompt (W-14 is information-management; AI's role is structural)
+- Clearance-limited onboarding support prompt — no dedicated prompt (W-15 is personal-planning; AI's role is optional structuring)
 - Prompt critique / output QA prompt
 
 Each prompt should include:

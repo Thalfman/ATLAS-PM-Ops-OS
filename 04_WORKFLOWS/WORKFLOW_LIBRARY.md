@@ -2,144 +2,70 @@
 
 ## Library purpose
 
-This file collects reusable PM/Ops workflows that can be performed manually, supported by Gemini Enterprise, and later migrated to approved enterprise systems. Each workflow should improve project integrity, reporting quality, schedule/accounting reconciliation, discrepancy resolution, action tracking, lessons learned, SOP quality, or executive communication.
+The ATLAS workflow library is the set of manual-first PM/Ops workflow cards Tom uses for personal preparation, synthetic demos, and eventually employer-approved migration. Each card improves project integrity, reporting quality, schedule/accounting reconciliation, discrepancy resolution, action tracking, lessons learned, SOP quality, executive communication, or knowledge capture.
+
+This file is the index. The reusable schema lives in `04_WORKFLOWS/WORKFLOW_CARD_TEMPLATE.md`. Each individual workflow lives in its own `04_WORKFLOWS/W-NN-<slug>.md` file. The Phase 3 governance bundle defines the data envelope and human-review pattern; workflow cards cite that bundle rather than redefining it.
 
 ## Universal workflow rules
 
 1. Use only approved tools for employer data.
-2. Use only synthetic/generic data in personal preparation.
-3. Keep a human accountable for review and decisions.
-4. Ask AI to structure, compare, summarize, draft, or flag inconsistencies; do not ask AI to make official commitments.
-5. Preserve audit trails: input source, date, human reviewer, output destination, and unresolved assumptions.
+2. Use only synthetic, public, or Tom-personal data in personal preparation.
+3. Keep a human accountable for review and decisions. AI never makes official commitments.
+4. Ask AI to structure, compare, summarize, draft, or flag inconsistencies. Do not ask AI to decide, approve, escalate, or send.
+5. Preserve audit trails per `06_GOVERNANCE/HUMAN_REVIEW_AND_AUDITABILITY_MODEL.md`: source, tool, operator, reviewer, accountable owner, date, outcome, storage location.
 6. Avoid black-box automation until the manual process is accepted and stable.
 
-## Standard workflow card format
+## Governance bundle (single source of truth - do not redefine)
 
-Each workflow should use this structure:
+Every workflow card cites these by filename and section:
 
-```text
-Workflow name:
-PM/Ops problem:
-Safe inputs:
-Prohibited inputs:
-AI support role:
-Human review role:
-Output:
-Cadence:
-Audit trail:
-Migration path:
-```
+- `06_GOVERNANCE/DATA_SENSITIVITY_DECISION_MODEL.md` - five data categories (Synthetic, Public, Tom-personal, Employer-approved, Prohibited) and four tool environments (ATLAS-local Markdown, Personal AI tool, Employer-approved AI tool, No AI tool). When in doubt: more restrictive (D-0024).
+- `06_GOVERNANCE/HUMAN_REVIEW_AND_AUDITABILITY_MODEL.md` - three review intensities (Light, Standard, Strict) and six per-domain review patterns (Status/Schedule/Finance-EVM/Meeting-notes/Risk-and-issue/SOP-and-lessons-learned). Carries the pre-flight and post-flight checklists. (D-0023)
+- `06_GOVERNANCE/AI_TOOL_APPROVAL_STRATEGY.md` - six-step approval pattern required before any AI use case touches employer data. Cited in every card's "Migration notes" section. (D-0025)
+- `06_GOVERNANCE/AI_GOVERNANCE_NOTES.md` - personal-preparation vs employer-deployable distinction. Implicit in every card's "Migration notes" section. (D-0026)
 
-## Starter workflow cards
+## Standard workflow card schema
 
-### 1. AI-assisted weekly status report
+Each workflow card follows the 16-section schema in `04_WORKFLOWS/WORKFLOW_CARD_TEMPLATE.md`. The 16 sections cover the 12 required fields from the Phase 4 prompt plus the 4 governance citations plus identity and cross-references. Section order is fixed: identity, then problem (§§1-3), then governance envelope (§4), then inputs and outputs (§§5-8), then human review (§9), then process (§10), then controls (§§11-12), then failure handling (§13), then migration (§14), then cross-references (§15).
 
-**PM/Ops problem:** Weekly reporting can become inconsistent, overly technical, or disconnected from schedule, action, risk, and financial realities.
+To add a new workflow:
 
-**Safe inputs for personal prep:** Synthetic milestone list, fictional accomplishments, fictional blockers, generic risk examples, and generic next-step items.
+1. Copy `WORKFLOW_CARD_TEMPLATE.md` to the next free `W-NN-<slug>.md`.
+2. Populate all 16 sections. Do not leave placeholders.
+3. Append a row to the index table below.
+4. Add or update the matching `03_BACKLOG/ARTIFACT_BACKLOG.md` row so Notes points at the W-NN file and Status reflects readiness.
+5. If the new workflow introduces a durable design choice (new pattern, new constraint, new category), log it in `10_DECISION_LOG/DECISION_LOG.md` in the same session.
 
-**Prohibited inputs in personal tools:** Real employer status reports, internal schedules, contract details, customer details, financials, technical content, or nonpublic program names.
+## Workflow index
 
-**AI support role:** Help structure a draft into executive-readable sections: accomplishments, schedule movement, risks/issues, decisions needed, and next steps.
+| W-ID | Workflow | Backlog ID | Data category | Tool environment | Review intensity | File |
+|---|---|---|---|---|---|---|
+| W-01 | AI-assisted weekly status report | A-0008 | Synthetic / Tom-personal | Personal AI tool (Gemini-first) | Standard | `W-01-weekly-status-report.md` |
+| W-02 | Meeting notes to action items | A-0009 | Tom-personal | Personal AI tool (Gemini-first) | Standard | `W-02-meeting-notes-to-actions.md` |
+| W-03 | Action item aging and follow-up | A-0010 | Tom-personal | Personal AI tool (Gemini-first) | Standard | `W-03-action-item-aging.md` |
+| W-04 | Microsoft Project schedule health review | A-0015 (Phase 8) | Synthetic | Personal AI tool (Gemini-first) | Standard | `W-04-schedule-health-review.md` |
+| W-05 | Schedule variance narrative drafting | A-0016 (Phase 8) | Synthetic | Personal AI tool (Gemini-first) | Standard | `W-05-schedule-variance-narrative.md` |
+| W-06 | EVM variance explanation support | A-0066 | Synthetic | Personal AI tool (Gemini-first) | Standard | `W-06-evm-variance-explanation.md` |
+| W-07 | Risk register cleanup | A-0011 | Synthetic | Personal AI tool (Gemini-first) | Standard | `W-07-risk-register-cleanup.md` |
+| W-08 | Issue and discrepancy triage | A-0012 | Synthetic | Personal AI tool (Gemini-first) | Standard | `W-08-issue-and-discrepancy-triage.md` |
+| W-09 | Project accounting reconciliation narrative | A-0036 | Synthetic | Personal AI tool (Gemini-first) | Standard | `W-09-accounting-reconciliation-narrative.md` |
+| W-10 | Lessons learned capture | A-0013 (Phase 10) | Synthetic | Personal AI tool (Gemini-first) | Standard | `W-10-lessons-learned-capture.md` |
+| W-11 | SOP draft generation | A-0014 (Phase 10) | Synthetic | Personal AI tool (Gemini-first) | Standard | `W-11-sop-draft-generation.md` |
+| W-12 | Executive brief generation | A-0067 | Synthetic / Tom-personal | Personal AI tool (Gemini-first) | Standard | `W-12-executive-brief-generation.md` |
+| W-13 | Cross-tool data mismatch investigation | A-0037 | Synthetic | Personal AI tool (Gemini-first) | Standard | `W-13-cross-tool-mismatch-investigation.md` |
+| W-14 | Google Workspace knowledge workflow | A-0020 | Public / Synthetic | Employer-approved AI tool (Workspace) | Standard | `W-14-google-workspace-knowledge.md` |
+| W-15 | Clearance-limited onboarding workflow | A-0068 | Tom-personal | ATLAS-local Markdown / Personal AI tool | Light | `W-15-clearance-limited-onboarding.md` |
 
-**Human review role:** Verify facts, remove unsupported claims, calibrate tone, and approve final wording.
+Review intensity in the table is the default for personal-preparation use. When the same workflow is run against Employer-approved data in an Employer-approved AI tool, review intensity moves to Strict and the §14 migration notes in each card apply.
 
-**Output:** Human-reviewed weekly status narrative.
+## Maintenance and decision log
 
-**Cadence:** Weekly or aligned to existing reporting rhythm.
+- Workflow card IDs (W-NN) are append-only. Retire a workflow by setting Status to `Deferred`; never reuse an ID. Parallels the append-only A-ID rule (D-0017).
+- Schema changes apply to all cards. Update `WORKFLOW_CARD_TEMPLATE.md` first, then back-port every existing W-NN file in the same session, then log the change.
+- Phase 5 prompts pair against these workflows. Each Phase 5 prompt names the W-NN it serves.
 
-**Audit trail:** Source list, drafter, reviewer, date, final destination.
+## Cross-references
 
-**Migration path:** Start as Gemini-assisted drafting in approved docs; later integrate with approved reporting systems if allowed.
-
-### 2. AI-assisted meeting notes to action items
-
-**PM/Ops problem:** Meeting outcomes often remain buried in notes instead of becoming clear owner/date/action records.
-
-**Safe inputs for personal prep:** Fictional meeting notes or Tom-created generic examples.
-
-**AI support role:** Extract action items, owners, due dates, dependencies, risks, open questions, and decisions from notes.
-
-**Human review role:** Confirm each action is real, assign correct owner, validate due date, and remove sensitive details.
-
-**Output:** Action item table with owner, due date, status, aging, dependency, and follow-up language.
-
-**Cadence:** After recurring meetings.
-
-**Migration path:** Approved Docs/Sheets first; later approved action tracker or PMIS integration.
-
-### 3. AI-assisted action item aging and follow-up
-
-**PM/Ops problem:** Aging actions erode credibility and create hidden schedule or readiness risk.
-
-**Safe inputs for personal prep:** Synthetic action tracker with fictional owners and dates.
-
-**AI support role:** Identify overdue, blocked, ambiguous, duplicate, or dependency-heavy actions. Draft neutral follow-up language.
-
-**Human review role:** Validate ownership and context. Avoid blame language. Confirm whether escalation is appropriate.
-
-**Output:** Aging summary and owner follow-up draft.
-
-**Cadence:** Twice weekly or before staff meetings.
-
-### 4. AI-assisted schedule health review
-
-**PM/Ops problem:** Schedules may contain logic gaps, stale dates, unclear dependencies, missing baselines, or variance narratives that are difficult to explain.
-
-**Safe inputs for personal prep:** Synthetic task list, fictional dependencies, generic schedule fields.
-
-**AI support role:** Flag likely schedule hygiene issues, ask clarifying questions, and help draft variance narratives.
-
-**Human review role:** Validate with scheduler/SMEs. Do not override technical estimates.
-
-**Output:** Schedule health observation list and narrative draft.
-
-**Migration path:** Microsoft Project export reviewed only inside approved environment; Gemini or other AI only if approved for that data.
-
-### 5. AI-assisted EVM variance explanation support
-
-**PM/Ops problem:** Variance explanations can be vague, inconsistent, or disconnected from corrective action.
-
-**Safe inputs for personal prep:** Synthetic CPI/SPI examples, fictional variance drivers, generic corrective actions.
-
-**AI support role:** Help structure cause-impact-corrective action narratives and identify missing explanation elements.
-
-**Human review role:** Verify actual numbers, contractual language, and finance/program controls. Do not let AI invent causes.
-
-**Output:** Draft variance explanation for review.
-
-### 6. AI-assisted risk register cleanup
-
-**PM/Ops problem:** Risks often lack clear condition, consequence, trigger, owner, mitigation, or response status.
-
-**Safe inputs for personal prep:** Fictional risk examples.
-
-**AI support role:** Rewrite vague risk statements into condition-consequence form and flag missing fields.
-
-**Human review role:** Confirm risk validity, owner, probability/impact, and response plan.
-
-**Output:** Cleaned risk register entries ready for human review.
-
-### 7. AI-assisted project accounting reconciliation narrative
-
-**PM/Ops problem:** Schedule, labor, accounting, and reporting views may not align, and the narrative can become unclear.
-
-**Safe inputs for personal prep:** Synthetic cost categories, fictional mismatches, generic period close examples.
-
-**AI support role:** Structure discrepancy hypotheses, investigation steps, and neutral reconciliation narrative.
-
-**Human review role:** Confirm with finance/project controls. Do not use AI to make accounting determinations.
-
-**Output:** Investigation summary and reconciliation narrative draft.
-
-### 8. AI-assisted lessons learned capture
-
-**PM/Ops problem:** Lessons are often captured too late or at too high a level to change future behavior.
-
-**Safe inputs for personal prep:** Fictional project event summaries.
-
-**AI support role:** Convert event notes into lesson, trigger, impact, root cause, prevention, and SOP update candidates.
-
-**Human review role:** Validate accuracy, remove sensitive details, and approve reuse.
-
-**Output:** Lessons learned record and SOP update recommendation.
+- Phase 4 prompt: `05_PROMPTS/PHASE_PROMPTS/PHASE_04_WORKFLOW_LIBRARY.md`.
+- Backlog: `03_BACKLOG/ARTIFACT_BACKLOG.md` (Workflow library section, rows A-0008..A-0012, A-0020, A-0036..A-0038, A-0066..A-0068; cross-referenced rows A-0013..A-0016).
+- Decision log: D-0023..D-0027 (Phase 3 governance envelope); D-0029..D-0033 (Phase 4 schema, naming, structure, backlog reconciliation, branch).
